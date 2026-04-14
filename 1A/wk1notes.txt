@@ -1,0 +1,30 @@
+10 minutes - 
+Introduction, Yanyan is substituting Jinyan for today. 
+Jinyan Miao is the TA for Physics 1A Lec 2 and he will be back next week to hold discussions
+Office hours is Monday 4-5 PM at his office PAB 2-429, right next door (can write this down on board).
+Tutoring center hours is  Monday 10-11 AM over Zoom (see link on BruinLearn)
+Email is jnmiu@ucla.edu (can write it on the board). Please ask student NOT to use the inbox feature on BruinLearn to find Jinyan, it will be difficult to keep track of that.
+Let the students know about the format of discussions:
+- 10-15 minutes mini review on what was covered last week during their regular lecture
+- 30 minutes to work on the worksheet problems and the TA will come around to answer questions
+- 5-10 minutes at the end that the TA will go over the solutions to the problems
+- Need to upload the completed worksheet to Gradescope, due Tuesday night 11:59 PM, graded by completion. 
+
+5 minutes -
+Brief review about position, velocity, and acceleration. You can draw on the board a velocity graph, I recommend a line with negative slope, then talk about how to go from here to the position graph and the acceleration graph step-by-step. In this case the acceleration is a straight line which indicates the slope of the velocity curve. Position is a parabola whose slope is given by the velocity curve. This should be enough for a review.
+
+30 minutes -
+Let student do the worksheet. First they will try to upload the blank worksheet to Gradescope. Just let them do it and raise their hand if they get any trouble, you can go around and help them one-by-one. Then they will work on the problems. You can go around and offer help if they need. 
+
+5 minutes - 
+Go over the solutions on the board. You can quickly go through the solutions I wrote, or just speed through it by computing area under the curve. 
+
+If student asks:
+Q: Attendance for discussion required? A: Not officially, but we highly encourage participation.
+Q: Will solution be posted online? A: I have to decide that later, depending on attendance rate.
+Q: Entry code to Gradescope? A: X8GV62
+Q: Where can we find the worksheet? A: We will have paper copy printed, also available on BruinLearn -> Files -> Discussion worksheets
+Q: How to submit worksheet? A: Phone scan it and upload it to Gradescope.
+Q: How to get full mark on worksheet? A: Serious attempt, doesn't need to be fully correct.
+For other questions, let them email me or wait until week-2 discussion.
+

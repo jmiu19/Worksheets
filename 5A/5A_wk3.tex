@@ -1,0 +1,147 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%Include Packages%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}, margin=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{rsfso}
+\usepackage{amsthm}
+\usepackage{wasysym}
+\usepackage[inline]{enumitem}   
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\Large \noindent \textbf{Physics 5A Discussion (Week 3)}\\
+\normalsize
+Department of Physics and Astronomy, UCLA\\
+\noindent\rule{8cm}{0.4pt}\\
+
+
+\begin{center}
+\includegraphics[scale=0.8]{projectile}
+\end{center}
+The rocket takes off from the ramp at time $t = 0$ second, at a position $100$ meters above the ground with an initial velocity $v_0=20$ m/s in the $x'$-direction (at a 30$^\circ$ angle above the horizon). However, right at the time it leaves the ramp, its boost is turned off. \\
+
+\noindent\textbf{Part 1}: Find the initial velocity vector components of the rocket.\\
+\noindent\textbf{Part 2}: Find the total time of flight of the rocket before reaching the ground.\\
+\noindent\textbf{Part 3:} Find the total horizontal distance that it can travel before reaching the ground.\\
+\noindent\textbf{Part 4:} Find the maximal height and the time it takes to reach that maximal height.\\
+
+
+
+
+\noindent I recommend working on this problem by the following steps:\\
+\textbf{Step 1:} Set up the $x$- and $y$-axes as shown in the figure. Write down the $x$- and $y$-components of the rocket's initial position, initial velocity, and acceleration vectors at time $t = 0$. \textit{(Hint: When boost is turned off and the rocket is in the air, what is its ``only" acceleration? You will need trigonometry to find components of $\vec{v}$.)}\\
+\newline\newline\newline
+\newline\newline\newline
+\newline\newline\newline
+\textbf{Step 2:} We don't know the rocket's final $x$-position when it hits the ground, but we know its final $y$-position. What is that final $y$-position? (\textit{Hint: No calculation needed.})\\
+
+\newpage
+\noindent\textbf{Step 3:} Write down the kinematic equations you will use for the rocket's motion in the $x$- and $y$-directions. Then substitute the values you obtained from Steps 1 and 2. (\textit{Hint: The motions in $x$- and $y$-directions are treated independently, so you should have two kinematic equations. Choose the starting and ending points carefully.})\\
+\newline\newline\newline
+\newline\newline\newline
+\newline\newline\newline
+
+\noindent\textbf{Step 4:} Solve for the total time of flight before the rocket reaches the ground. (\textit{Hint: Use the kinematic equation in $y$ direction.})\\
+\newline\newline\newline
+\newline\newline\newline
+\newline\newline\newline
+
+\noindent\textbf{Step 5:} Using the total time of flight from Step 4, find the total horizontal distance that the rocket can travel. (\textit{Hint: Use the kinematic equation in $x$-direction.})
+\newline\newline\newline
+\newline\newline\newline
+\newline\newline\newline
+
+\noindent\textbf{Step 6:} Find the maximum height the rocket reaches and the time it takes to reach that height. \textit{(Hint: Use the kinematic equation in $y$-direction, maximum of a parabola.)} 
+
+\newpage
+\textbf{Step 1 (Solution):}
+To find the initial position of the rocket at time $t = 0$ seconds, we see from the figure that, when the rocket just leaves the ramp, it is $100$ meters directly above where we define the origin $(0,0)$. Thus we can write its initial position as
+\begin{align*}
+\vec{x}_0 = (x_0, \, y_0) = (0\,\text{m},\, 100\,\text{m})\,.
+\end{align*}
+For its initial velocity, we see that the rocket is initially moving $20$ m/s in the "up-hill" direction (or the $x'$-direction defined in the figure) which is in a direction $30^\circ$ above the horizon. Then we can construct a small right triangle with $20$ m/s being the hypotenuse (the length of the velocity vector) and we want to find the length of adjacent ($x$-component of the vector) and the length of the opposite ($y$-component of the vector),
+\begin{align*}
+\vec{v}_0 = (v_{0,x},\, v_{0,y}) = (v_0\cos(\theta),\, v_0\sin(\theta)) = (20\cos(30^\circ)\,\text{m/s},\, 20 \sin(30^\circ)\, \text{m/s})\,.
+\end{align*}
+Finally, we want to find the acceleration vector. The boost of the rocket is turned off when it leaves the ramp, and we ignore the air resistance in this problem. Therefore, the only physical thing that is trying to change the motion of the rocket is the gravity, which is trying to pull the rocket down. Mathematically, we write
+\begin{align*}
+\vec{a} =(a_x,\, a_y) =(0\,\text{m/s}^2,\, -9.8\,\text{m/s}^2)
+\end{align*} 
+There is nothing trying to change the rocket's horizontal motion, meaning there is nothing pulling or pushing the rocket in the $x$-direction, and thus $a_x = 0$ m/s$^2$. \\
+
+\textbf{Step 2 (Solution):}
+When the rocket hits the ground, just by looking at the figure, we see that it reaches $y =0$ meters.\\
+
+\textbf{Step 3 (Solution):}
+There are two kinematic equations that we want to use here, one for the $x$-directional motion (thus everything in this equation is viewed as the ``$x$-component" of that quantity),
+\begin{align*}
+x = \frac{1}{2}a_x t^2 + v_{0,x} t + x_0\,,
+\end{align*} 
+and another one for the $y$-directional motion, 
+\begin{align*}
+y = \frac{1}{2}a_y t^2 + v_{0,y} t + y_0\,.
+\end{align*}
+We can plug in all the known quantities we have found in Step 1, I will ignore the units here, but please keep those in mind, 
+\begin{align*}
+x = \frac{1}{2}\cdot 0 \cdot t^2 + 20\cos(30^\circ)\cdot t + 0 \,,\qquad
+y = \frac{1}{2}\cdot (-9.8) \cdot t^2 + 20\sin(30^\circ)\cdot t + 100\,. 
+\end{align*}
+
+\textbf{Step 4}:
+Now we want to know how long it takes for the rocket to reach the ground, thus we are talking about the final $y$-position of the rocket. When it reaches the ground, from Step $2$, we know that $y = 0$, so we set the $y$-equation from Step 3 to be $0$, 
+\begin{align*}
+0= \frac{1}{2}\cdot (-9.8) \cdot t^2 + 20\sin(30^\circ)\cdot t + 100
+\end{align*}
+and solve for time $t$ using quadratic formula, 
+\begin{align*}
+t = \frac{-20\sin(30^\circ)\pm \sqrt{(20\sin(30^\circ))^2 - 4\cdot (-9.8/2)\cdot 100}}{2\cdot (-9.8/2)} =5.65 \text{ or } -3.61
+\end{align*}
+with the unit being seconds. We disregard the negative time $t=-3.61$ because it happens before the rocket leaves the ramp. Thus the final answer is $t= 5.65$ seconds for the rocket to reach the ground.\\
+
+\textbf{Step 5}: 
+To find the total horizontal distance that the rocket can travel before reaching the ground, we want to use the time it can travel before reaching the ground, which was done in Step 4. We thus simply plug $t = 5.65$ seconds to the $x$-equation in Step 3 to find how long it can travel when $t = 5.65$ seconds, 
+\begin{align*}
+x = 20 \cos(30^\circ) \cdot 5.65  = 97.86
+\end{align*}
+with the unit being meters. Thus it can travel $97.86$ meters before hitting the ground.\\
+
+\textbf{Step 6}: There are multiple ways of doing Step 6, we start with a mathematical one. The equation that describe how high the rocket can go is the $y$-equation we found in Step 3,
+\begin{align*}
+y = \frac{1}{2}a_y t^2 + v_{0,y} t + y_0
+\end{align*}
+and we want to maximize the $y$ in the left-hand side. The right-hand side of this equation is a parabola. Now recall one formula that you have seen in high school, for a parabola $ax^2 + bx+c$, its maximum occurs at $x = -b/(2a)$. Apply this to the parabola that we have, 
+\begin{align*}
+t_{\text{max-height}} = -\frac{v_{0,y}}{2\cdot (a_y/2)} = \frac{20\,\sin(30^\circ)}{9.8} = 1.02
+\end{align*}
+with the unit being seconds, and this is the time instant where the rocket reaches its maximum height. For a sanity check, this is a number greater than zero, and smaller than the time when the rocket hits the ground, which makes sense. Now to find its maximum height, we simply plug $t = 1.02$ seconds back in the $y$-equation, 
+\begin{align*}
+y =  \frac{1}{2}\cdot (-9.8) \cdot (1.02)^2 + 20\sin(30^\circ)\cdot (1.02) + 100 = 105.1\,
+\end{align*}
+with the unit being meters, which is larger than its initial height at $100$ meters, and thus makes sense.\\
+
+A more physical intuitive way to do it is by considering its acceleration in the $y$-direction. The rocket is slowing down by gravity by a constant rate $-9.8$ m/s$^2$, and its initial velocity in the $y$-direction is $20\sin(30^\circ)$ m/s. When the rocket reaches its maximum height, its $y$-component of the velocity becomes $0$ because it wants to turn round in the vertical direction at this instant, so
+\begin{align*}
+0 = v_{y} = v_{0,y} + a_yt = 20\sin(30^\circ) - 9.8 t\,,
+\end{align*}  
+where the right-hand side describes how its $y$-component of the velocity is changed by the gravity, now we get back the same formula for finding the time instant where the rocket reaches its maximum height,
+\begin{align*}
+t_{\text{max-height}} = -\frac{v_{0,y}}{2\cdot (a_y/2)} = \frac{20\,\sin(30^\circ)}{9.8} = 1.02\,.
+\end{align*}
+The result agrees with what we found above using the symmetry argument on parabola. 
+ 
+\end{document}
+
+

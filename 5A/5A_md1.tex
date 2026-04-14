@@ -1,0 +1,326 @@
+\documentclass[11pt, onesided]{book}
+
+%%%%%%%%%%%%%%Include Packages%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}, margin=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{rsfso}
+\usepackage{amsthm}
+\usepackage{wasysym}
+\usepackage[inline]{enumitem}   
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{colortbl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%Chapter Setting%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{$\mid$}\hsp}{0pt}{\Huge\bfseries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%Theorem environments%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+\theoremstyle{break}
+\theoremstyle{break}
+\newtheorem{axiom}{Axiom}
+\newtheorem{thm}{Theorem}[section]
+\renewcommand{\thethm}{\arabic{section}.\arabic{thm}}
+\newtheorem{lem}{Lemma}[thm]
+\newtheorem{cor}{Corollary}[thm]
+\newtheorem{defn}{Definition}[thm]
+\newenvironment{indEnv}[1][Proof]
+  {\proof[#1]\leftskip=1cm\rightskip=1cm}
+  {\endproof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%Integral%%%%%%%%%%%%%%%%%%%%%%%
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Power}{\mathcal{P}}
+\newcommand{\ee}[1]{\cdot 10^{#1}}
+\newcommand{\spa}{\text{span}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\degr}{\text{deg}}
+\newcommand{\pd}{\partial}
+\newcommand{\that}[1]{\widetilde{#1}}
+\newcommand{\lr}[1]{\left(#1\right)}
+\newcommand{\vmat}[1]{\begin{vmatrix} #1 \end{vmatrix}}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\rref}{\xrightarrow{\text{row\ reduce}}}
+\newcommand{\txtarrow}[1]{\xrightarrow{\text{#1}}}
+\newcommand{\txt}{Wald's \textit{General Relativity}}
+
+\newcommand{\note}{\color{red}Note: \color{black}}
+\newcommand{\remark}{\color{blue}Remark: \color{black}}
+\newcommand{\example}{\color{green}Example: \color{black}}
+\newcommand{\exercise}{\color{green}Exercise: \color{black}}
+
+%%%%%%%%%%%%%table of contents%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\cftchapindent}{0em}
+%\cftsetindents{section}{2em}{3em}
+%
+%\renewcommand\cfttoctitlefont{\hfill\huge\bfseries}
+%\renewcommand\cftaftertoctitle{\hfill\mbox{}}
+%
+%\setcounter{tocdepth}{2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Footnotes%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%Section%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\noindent \textbf{Physics 5A Midterm 1 Solution} \hfill Jinyan Miao\\
+\rule[0.25cm]{8cm}{0.4pt}
+
+\noindent \textbf{Multiple Choice:}\\
+
+\noindent \textbf{(1) D}\\
+Rearranging $F = C\rho Av^2$ can get us
+\begin{align*}
+C = \frac{F}{\rho Av^2}\,,
+\end{align*}
+so we see that
+\begin{align*}
+[C] = \frac{\text{kg m/s}^2}{(\text{kg/m}^3) \cdot (\text{m}^2) \cdot (\text{m/s})^2} = 1
+\end{align*}
+which implies $C$ is a dimensionless quantity. Correct answer is option D.\\
+
+
+\noindent \textbf{(2) D}\\
+To find which segment has the maximum speed, we look at the absolute value of their slope in the position graph. Segment A and C have slope $-2$ and $2$ m/s respectively, meaning they have the same speed (but traveling in opposite direction). Segment B has slope $0$ m/s. Segment D has slope 
+\begin{align*}
+\text{slope of D} = \frac{-4-2}{6-4} = -3\,\text{m/s}
+\end{align*}
+so it has speed $3$ m/s. Correct answer is option D.\\
+
+
+\noindent \textbf{(3) B}\\
+Displacement vector here is $\vec{r} = 30\,\text{m}\,\hat{x} + 40\,\text{m}\, \hat{y}$ with $\hat{x}$ being East and $\hat{y}$ being North. Magnitude of the total displacement from her staring point is 
+\begin{align*}
+|\vec{r}| = \sqrt{30^2 + 40^2} = 50\,\text{m}\,.
+\end{align*}
+The correct answer is B.\\
+
+\noindent \textbf{(4) D}\\
+When we talk about velocity and acceleration, we are talking about vectors, which have $x$- and $y$-components. If any one component of the vector is nonzero, the vector is nonzero. Velocity in this case always has nonzero $x$-component given by $v_0 \cos(30^\circ)$, even at the apex, thus the velocity is nonzero at the apex (even its $y$-component is zero there). The $y$-component of the acceleration due to gravity is always nonzero, thus acceleration is also nonzero at the apex. Correct answer is D.\\
+
+\noindent \textbf{(5) B}\\
+This is a free-fall problem, we use
+\begin{align*}
+y = \frac{1}{2}a_y t^2 + v_{0,y} t+ y_0\,,
+\end{align*}
+with initial height $y_0 = 45\,$m, initial velocity $v_{0,y}=0\,$m/s, and $a_y = -9.8\,$m/s$^2$ being the gravity. Thus at the ground, $y=0$, we obtain
+\begin{align*}
+0 = -\frac{9.8}{2} t^2 + 45\,,
+\end{align*}
+which gives $t = 3.03\,$s if we keep only the positive time. Correct answer is B. \\
+
+\newpage
+\noindent\textbf{Problem 1}:\\
+
+(a, b) There are multiple ways of doing this problem, students were taught in different ways to solve this problem during lecture and discussion. I set up the coordinate system such that the base is at $y=0\,$m, and the edge of the cliff is at $y=40\,$m. \\
+
+1. Solving it using one of the formulas directly, 
+\begin{align*}
+0 = v_{f,y}^2 = v_{i,y}^2 + 2a_y\, \Delta y = 15^2 + 2\cdot(-9.8) \, \Delta y 
+\end{align*}
+thus we get $\Delta y = 11.48 \,\text{m}$. Then we solve for the time at which it reaches the maximum height, one way to do it is by
+\begin{align*}
+11.48 +40 = y = \frac{1}{2}a_y t^2 + v_{0,y} t+ y_0  = -\frac{9.8}{2} t^2 + 15 t + 40
+\end{align*}
+from here the time is $t=1.53$ seconds.
+
+2. Alternatively, we first find the time that the ball reaches the maximum height using the $y$-direction equation of motion
+\begin{align*}
+y = \frac{1}{2}a_y t^2 + v_{0,y} t+ y_0 = -\frac{9.8}{2} t^2 + 15 t + 40
+\end{align*}
+which is a parabola and $y$ is maximized at
+\begin{align*}
+t = \frac{-15}{2\cdot (-9.8/2)} = 1.53\,\text{s}\,,
+\end{align*}
+and thus maximum of $y$ is
+\begin{align*}
+y = -\frac{9.8}{2} \cdot 1.53^2 + 15 \cdot 1.53 + 40= 51.49\,\text{m}
+\end{align*}
+and if we measure it from the launch point, we subtract the height of the launch point, which gives $51.49 - 40 = 11.49$ m for the final answer, matching with the first method.\\
+
+3. The third way to solve this problem is by considering velocity in the $y$-direction. At the max height, the ball stop and turn around and thus $v_{f,y} = 0\,$m/s at this point. Using definitional formula
+\begin{align*}
+v_{f,y} = a_y t + v_{i,y} = -9.8 t + 15\,,
+\end{align*} 
+we get the time
+\begin{align*}
+t = \frac{15}{9.8} = 1.53\,\text{s}\,,
+\end{align*}
+then the maximum of $y$ is
+\begin{align*}
+y = -\frac{9.8}{2} \cdot 1.53^2 + 15 \cdot 1.53 + 40= 51.49\,\text{m}\,.
+\end{align*}
+
+(c) Again, there are multiple ways to solve this.\\
+
+1. The final velocity for the ball to reach the base is 
+\begin{align*}
+v_{f,y} = a_y t + v_{i,y} = -9.8 t + 15
+\end{align*}
+with $t$ being the time it takes the reach the ground, so we find $t$ by
+\begin{align*}
+0 = y = \frac{1}{2}a_y t^2 + v_{0,y} t+ y_0 = -\frac{9.8}{2} t^2 + 15 t + 40\,,
+\end{align*}
+we find $t = 4.77\,$s, so 
+\begin{align*}
+v_{f,y} = -9.8 \cdot 4.77 + 15=-31.74\,\text{m/s}\,.
+\end{align*}
+The negative sign indicate the direction, and $31.74$ m/s is the magnitude.\\
+
+2. Alternatively, we use
+\begin{align*}
+v_{f,y}^2 = v_{i,y}^2 + 2a\,\Delta y = 15^2 + 2\cdot (-9.8)\cdot (-40)=1009\,\text{(m/s)}^2\,,
+\end{align*}
+and thus
+\begin{align*}
+v_{f,y}=-31.77\,\text{m/s}\,.
+\end{align*}
+When solving this problem, some students might write their final answer as
+\begin{align*}
+\vec{v}_{f} = (0\,\text{m/s},\ -31.77\,\text{m/s})
+\end{align*}
+which is completely correct and it indicates the direction and magnitude clearly.
+
+
+\newpage
+\noindent\textbf{Problem 2}:\\
+
+(a) The velocity components are calculated using trigonometry, the velocity vector is pointing $60^\circ$ above the horizon, with magnitude $20$ m/s. Thus we write
+\begin{align*}
+v_{0,x} = 20\cdot \cos(60^\circ) = 10.0\,\text{m/s}\,,\qquad
+v_{0,y} = 20\cdot \sin(60^\circ) = 17.3\,\text{m/s}\,.
+\end{align*}
+
+(b) We use the $x$-direction equation of motion, 
+\begin{align*}
+x = \frac{1}{2}a_x t^2 + v_{0,x} t+ x_0\,,
+\end{align*}
+with $a_x = 0\,$m/s$^2$ because there is no acceleration in the $x$-direction for the tracer, $v_{0,x}$ is calculated above, $x_0$ can be set to zero (that means the tracer is thrown at the $x_0=0$ location). The car is at $35.0$ meters away from where the tracer is thrown, so target position is $x = 35$. Now plug all of them in,
+\begin{align*}
+35 = 10 t\,,
+\end{align*}
+so we find
+\begin{align*}
+t = 3.50\,\text{s}\,.
+\end{align*}
+
+
+(c) We use the $y$-direction equation of motion, 
+\begin{align*}
+y-y_0 = \frac{1}{2}a_y t^2 + v_{0,y} t\,,
+\end{align*}
+with $a_y = -9.8\,$m/s$^2$ due to gravity, $v_{0,y}$ is calculated in part (a), and $y_0$ is the height of the launch point (unknown, but it does not matter, because we want to find the height relative to the launch point, so $y-y_0$ is the quantity that we want to find). The tracer gets to the car's horizontal position at $t = 3.50\,\text{s}$ as calculated in part (b), so we find
+\begin{align*}
+y-y_0 = \frac{1}{2}\cdot (-9.8) \cdot (3.50)^2 + (17.3)\cdot (3.50)=0.525\,\text{m}\,.
+\end{align*}
+
+(d) Our answer in part (c) says the tracer at the car's position is $0.525$ meters above the launch point in the $y$-direction, but the launch point has the same height as the car's roof, so the tracer at the car's position is $0.525$ meters above the car's roof. The tracer flies over the car.\\
+
+\newpage
+\noindent \textbf{Problem 3}: \\
+
+Student may be mixing the idea of position vector and displacement vector when approaching part (a) and (b). The two position vectors $\vec{r}_1$ and $\vec{r}_2$ in the setup of the problem are position vectors with tails at the origin, and they are not displacement vectors. $\vec{r}_1$ and $\vec{r}_2$ indicate the position of the drone at the end of Leg 1 and Leg 2. $\vec{r}_2$ does not indicate how the drone displaces from $\vec{r}_1$. \\
+
+
+(a) Displacement vector is calculated by final position minus initial position vector,
+\begin{align*}
+\Delta\vec{r}_1 = \vec{r}_1 - \vec{r}_0 = (100 \hat{\i} + 0 \hat{\j})\, m\,,
+\end{align*}
+where $\vec{r}_0$ is the origin, which is the point where the drone started its motion before Leg 1. Now for Leg 2, displacement vector is again final position minus initial position vector, 
+\begin{align*}
+\Delta\vec{r}_2 = \vec{r}_2 - \vec{r}_1 = \left((60-100) \hat{\i} + (30-0) \hat{\j}\right)\, \text{m}= \left(-40 \hat{\i} + 30 \hat{\j}\right)\, \text{m}\,.
+\end{align*} 
+
+(b) Total displacement vector is 
+\begin{align*}
+\Delta\vec{r}_{\text{total}} = \vec{r}_2 - \vec{r}_0 =\left( 60 \hat{\i} + 30 \hat{\j}\right)\, \text{m}\,,
+\end{align*}
+this is because the drone started at the origin $\vec{r}_0$ at $t = 0$ seconds, and ended at $\vec{r}_2$ at $t = 15$ seconds.\\
+
+(c) Distance traveled by the drone during Leg 1 is $|\Delta \vec{r}_1| = 100$ meters. This is just the $x$-component of $\Delta\vec{r}_1$ because the drone had no $y$-direction motion during Leg 1. \\
+
+(d) Total distance traveled in the first $15$ seconds is
+\begin{align*}
+|\Delta \vec{r}_1| + |\Delta \vec{r}_2| = 100 \,\text{m} + \sqrt{(-40)^2 + (30)^2}\,\text{m} = 150 \,\text{m}\,.
+\end{align*}
+Award $2$ points only if the student calculated $|\Delta\vec{r}_{\text{total}}|$. \\
+
+(e) Average velocity for the entire journey should be calculated directly from $\Delta\vec{r}_{\text{total}}$, 
+\begin{align*}
+\vec{v}_{\text{avg}} = \frac{\Delta\vec{r}_{\text{total}}}{\Delta t} = \left(\frac{60}{15}\,\hat{\i} + \frac{30}{15}\,\hat{\j}\right)\,\text{m/s} = (4\hat{\i}+2\hat{\j})\,\text{m/s}\,. 
+\end{align*}
+
+(f) The average speed of the entire journey should be calculated directly from the total distance traveled $|\Delta \vec{r}_1| + |\Delta \vec{r}_2|$, 
+\begin{align*}
+\bar{s} = \frac{|\Delta \vec{r}_1| + |\Delta \vec{r}_2|}{\Delta t} = \frac{150}{15}\,\text{m/s} = 10\,\text{m/s}\,.
+\end{align*}
+
+
+(g) This is by definition of average velocity,
+\begin{align*}
+\vec{a}_{\text{avg}} = \frac{\vec{v}_f - \vec{v}_i}{\Delta t} = \left(
+\frac{-6-12}{15}\,\hat{\i} + \frac{5-1}{15}\,\hat{\j}
+\right)\,\text{m/s}^2 = \left(-1.20 \,\hat{\i} + 0.267\,\hat{\j}\right)\,\text{m/s}^2\,.
+\end{align*}
+
+The followings are just different notations for the component form of a vector, 
+\begin{align*}
+1\hat{\i}+2\hat{\j} = 1\hat{x} + 2\hat{y} = (1,2)\,.
+\end{align*}
+
+
+\end{document}
+ 
+
+
+
+
+

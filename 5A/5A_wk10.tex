@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%Include Packages%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}, margin=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{rsfso}
+\usepackage{amsthm}
+\usepackage{wasysym}
+\usepackage[inline]{enumitem}   
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\Large \noindent \textbf{Physics 5A Discussion (Week 10)}\\
+\normalsize
+Department of Physics and Astronomy, UCLA\\
+\noindent\rule{8cm}{0.4pt}\\
+
+\begin{center}
+\includegraphics[scale=0.8]{projectile}
+\end{center}
+The rocket takes off from the ramp at time $t = 0$ seconds, at a position $100$ meters above the ground with an initial velocity $v_0=20$ m/s in the $x'$-direction (at a 30$^\circ$ angle above the horizon). However, right at the time it leaves the ramp, its boost is turned off. \\
+
+\noindent\textbf{Question 1}: What is the speed of the rocket when it hits the ground? (\textit{Hint: There are two ways to solve for the final speed, either using the method that you learned from the week-3 worksheet, or using conservation of energy. Mass will get canceled out.})\\
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+
+
+\noindent\textbf{Question 2}: At what height does the rocket have the lowest speed? (\textit{Hint: Use conservation of energy, with Pythagorean theorem $v^2 = v_x^2 + v_y^2$. However, you can also solve this problem using the method you learned from the week-3 worksheet.})\\
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+
+\newpage
+\noindent\textbf{Question 3:} At the moment when the rocket has the lowest speed, how far has it traveled in the horizontal direction ($x$-direction distance away from the origin)? (\textit{Hint: It is not possible to solve this problem using conservation of energy, you need to apply the kinematic equations you learned in the week-3 worksheet.})
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+\hfill\break\hfill\break\hfill\break
+
+
+
+Now we are launching a pumpkin using a compressed spring. The spring has a spring constant $k = 10\,$N/m, and has been compressed by $10\,$m from its equilibrium length. The mass of the pumpkin is $2\,$kg, and the pumpkin is at $100\,$m above the ground when it is launched.   
+\begin{center}
+\includegraphics[scale=0.44]{launch}
+\end{center}
+\noindent\textbf{Question 4}: Find the speed of the pumpkin when it hits the ground. (\textit{Hint: Use conservation of energy. Solving this problem using kinematic equations is not possible.})
+
+\newpage
+\textbf{Solution to Question 1}: Using conservation of energy to solve this problem is easy. We start with the statement of energy conservation for the rocket, 
+\begin{align*}
+\text{Initial Kinetic Energy} +
+\text{Initial }&\text{Potential Energy} + \text{Work Done} \\
+&= 
+\text{Final Kinetic Energy} +
+\text{Final Potential Energy}\,.
+\end{align*}
+We apply formulas 
+\begin{align*}
+T = \frac{1}{2}mv^2\,,\qquad
+U_g = mgh
+\end{align*}
+to write
+\begin{align*}
+\frac{1}{2}mv_i^2 + mgh_i + W = \frac{1}{2}mv_f^2 + mgh_f\,.
+\end{align*}
+This is because the only potential energy involved here is the potential energy due to gravity. There is no external force applied to the rocket, so the work done $W = 0$. One might argue that the gravitational force does work in this process, but this effect has been accounted by $U_g = mgh$ (which is precisely the work done by gravity), so we do not add an extra term for work done by gravity. Then we cancel the mass on both sides of the equation, and plug in the numbers, 
+\begin{align*}
+\frac{1}{2}(20)^2 + (9.8)\cdot (100) &= \frac{1}{2}v_f^2 + (9.8)\cdot 0
+\end{align*}
+and we find
+\begin{align*}
+v_f = 48.6\,\text{m/s}\,.
+\end{align*}
+Now we can also solve this problem using kinematics, just a brief review, we will apply 
+\begin{align*}
+0 = y = \frac{1}{2}a_yt^2 + v_{i,y}t + y_i = \frac{1}{2}(-9.8)\,t^2 +20 \sin(30^\circ)\,t + 100\,, 
+\end{align*}
+from which we get the time it takes for the rocket to get to the final point (hitting the ground), 
+\begin{align*}
+t = 5.65\,\text{s}\,.
+\end{align*}
+Then we compute the $x$- and $y$-components of the final velocity, 
+\begin{align*}
+v_{x,f} = v_{x,i} + a_x t = v_{x,i} = v_0 \cos(\theta) = 20 \cos(30^\circ) = 17.3\,\text{m/s}\,,\\
+v_{y,f} = v_{y,i} + a_y t =  20 \sin(30^\circ)+(-9.8)(5.65) =- 45.4\,\text{m/s}\,.
+\end{align*}
+The speed at the final position is then
+\begin{align*}
+v_f = \sqrt{v_{x,f}^2 + v_{y,f}^2} = \sqrt{17.3^2 + (-45.4)^2} = 48.6\,\text{m/s}\,.
+\end{align*}
+We get the same answer as using conservation of energy. You can tell that this question can be easily solved using conservation of energy, but quite complicated using kinematics. \\
+
+\textbf{Solution to Question 2}: We use again conservation of energy, 
+\begin{align*}
+\frac{1}{2}mv_i^2 + mgh_i + W = \frac{1}{2}mv_f^2 + mgh_f\,,
+\end{align*}
+but we plug in $v_f^2 = v_{f,x}^2 + v_{f,y}^2$ to obtain 
+\begin{align*}
+\frac{1}{2}mv_i^2 + mgh_i +W = \frac{1}{2}m(v_{f,x}^2 + v_{f,y}^2) + mgh_f\,.
+\end{align*}
+In fact, you can also do this substitution for $v_i^2$, but it will given you the same result if you work out the algebra. Now the argument that I will make here is that the speed of the rocket is the lowest when the rocket is at the highest point of its trajectory. Here is the reasoning: Recall that when we do this problem using kinematics, we have 
+\begin{align*}
+v_{f,x} = v_{i,x} + a_x t = v_{i,x} = v_0 \cos(\theta) =20 \cos(30^\circ) = 17.3 \,\text{m/s}
+\end{align*}
+because the $x$-component of the acceleration of the rocket is zero throughout the process, so the $x$-component of the velocity never changes in this problem. Then the only thing we can change is the $y$-component of the velocity of the rocket, which is affected by gravity. At the top of the trajectory, the $y$-component of the velocity $v_{f,y} = 0$ (the rocket changes from going up to going down), so at this point, the speed 
+$$v_f = \sqrt{v_{f,x}^2 + v_{f,y}^2}$$ 
+is minimized. Now again, $W = 0$, we cancel the mass and plug in everything else, 
+\begin{align*}
+\frac{1}{2}(20)^2 + (9.8)\cdot (100) = \frac{1}{2}\left((20 \cos(30^\circ))^2+ 0^2 \right) + 9.8\, h_f\,.
+\end{align*}
+Then we find the height 
+$$h_f = 105\,\text{m}\,.$$
+I can redo this problem using kinematics, first we find the time that the rocket gets to the highest point of its trajectory,
+\begin{align*}
+0 = v_{f,y} = v_{i,y} + a_y t =   20 \sin(30^\circ)+(-9.8)\, t
+\end{align*}
+from which we get $t = 1.02\,$s. Then we use 
+\begin{align*}
+y = \frac{1}{2}a_y t^2 + v_{i,y} t + y_i =
+\frac{1}{2}(-9.8)\cdot(1.02)^2 +(20\sin(30^\circ))\cdot (1.02) +100=105\,\text{m}\,.
+\end{align*}
+Again, I would say that using conservation of energy is easier than using kinematics.\\
+
+\textbf{Solution to Question 3}: Now we see one problem that cannot be solved using conservation of energy. This is because, out of all formulas that we have for talking about energy, none of them talks about the $x$-position of the rocket. Then we have to go back and use kinematics to solve the problem. Start with finding the time it reaches to the highest point in its trajectory (as argued above, this corresponds to the point where the rocket has the lowest speed), 
+\begin{align*}
+0 = v_{f,y} = v_{i,y} + a_y t =   20 \sin(30^\circ)+(-9.8)\, t\,,
+\end{align*} 
+so we have $t = 1.02\,$s. Then we can find the $x$-direction distance traveled
+\begin{align*}
+\Delta x =\frac{1}{2}a_x t^2 +  v_{i,x}t =  v_{i,x}t = 20 \cos(30^\circ) \cdot 1.02 = 17.7\,\text{m}\,.\\
+\end{align*}
+
+\textbf{Solution to Question 4}: We are not able to apply kinematics (without calculus) to solve this problem because the spring force will be changing when it is pushing the pumpkin out. It is much easier to solve this problem using conservation of energy. We again start with the statement of conservation of energy, but in addition to kinetic energy and gravitational potential energy, we also have spring potential energy here, so
+\begin{align*}
+\frac{1}{2}mv_i^2 + mgh_i + \frac{1}{2}k(\Delta x)^2 = \frac{1}{2}mv_f^2 + mgh_f\,. \tag{*}
+\end{align*}
+The spring will restore back to the equilibrium length after it pushes the pumpkin out, so all the spring potential energy will go to the final energy of the pumpkin. This is basically what equation (*) is saying. Then we just need to plug in the numbers,
+\begin{align*}
+\frac{1}{2}(2)(0)^2 + (9.8)(2)(100)+ \frac{1}{2}(10)(10)^2 &= \frac{1}{2}v_f^2 + (9.8)(2)(0),
+\end{align*}
+so we find
+\begin{align*}
+v_f = 49.6\,\text{m/s}\,.
+\end{align*}
+Notice that I used $v_i=0\,$m/s as the pumpkin is just sitting there before we launch it. 
+
+\end{document}
+
+
