@@ -119,18 +119,18 @@ In the problem, it is said that $q_3$ is initially at $\vec{x}_3 = (5,0)$, to th
 In this configuration, we know that $q_3$ experiences a net force that has a zero $x$-component, because the net force is directly downwards. The force that $q_1$ exerts on $q_3$ has the form
 \begin{align*}
 \vec{F}_{13} = \left(
-\frac{k|q_1q_3|}{r^2}\, \cos(\theta)\,,\
-\frac{k|q_1q_3|}{r^2}\, \sin(\theta)
+-\frac{k|q_1q_3|}{r^2}\, \cos(\theta)\,,\
+-\frac{k|q_1q_3|}{r^2}\, \sin(\theta)
 \right)\,,
 \end{align*}
 where $r = \sqrt{3^2 + 3^2}\,\text{m}= 3\sqrt{2}$\,m indicates the distance between charge $q_1$ and charge $q_3$. The $\sin$ and $\cos$ are there to extract the $x$- and $y$-components of $\vec{F}_{13}$. We are able to do this (extract the components) because the magnitude of $\vec{F}_{13}$ is $|kq_1q_3|/r^2$ based on Coulomb's law. Similarly, we write down
 \begin{align*}
-\vec{F}_{23} = \left(-
+\vec{F}_{23} = \left(
 \frac{k|q_2q_3|}{R^2}\, \cos(\phi)\,,\
-\frac{k|q_2q_3|}{R^2}\, \sin(\phi)
+-\frac{k|q_2q_3|}{R^2}\, \sin(\phi)
 \right)
 \end{align*}
-where $R = \sqrt{(10-3)^2 + 3^2} = \sqrt{58}\,$m, and $\phi$ is the angle indicated on the original figure. The additional negative sign is added in the $x$-component to ensure that $\vec{F}_{23}$ is dragging $q_3$ towards $q_2$ (there is another negative sign in $q_3$, and we want the $x$-component to be positive, while the $y$-component to be negative). \\
+where $R = \sqrt{(10-3)^2 + 3^2} = \sqrt{58}\,$m, and $\phi$ is the angle indicated on the original figure. The additional negative sign is added in the $y$-component to ensure that $\vec{F}_{23}$ is dragging $q_3$ towards $q_2$ (so we want the force to be pointing right-down, positive in $x$-component and negative in $y$-component). \\
 
 Using the trigonometry here, we see that 
 \begin{align*}
@@ -144,29 +144,29 @@ Using the trigonometry here, we see that
 So we conclude 
 \begin{align*}
 \vec{F}_{13} = \left(
-\frac{kq_1q_3}{18}\,\frac{1}{\sqrt{2}} \,,\
-\frac{kq_1q_3}{18}\,\frac{1}{\sqrt{2}}
+-\frac{k|q_1q_3|}{18}\,\frac{1}{\sqrt{2}} \,,\
+-\frac{k|q_1q_3|}{18}\,\frac{1}{\sqrt{2}}
 \right)\,,\qquad
-\vec{F}_{23} = \left(-
-\frac{kq_2q_3}{58}\,\frac{7}{\sqrt{58}} \,,\
-\frac{kq_2q_3}{58}\,\frac{3}{\sqrt{58}} \,.
+\vec{F}_{23} = \left(
+\frac{k|q_2q_3|}{58}\,\frac{7}{\sqrt{58}} \,,\
+-\frac{k|q_2q_3|}{58}\,\frac{3}{\sqrt{58}} \,.
 \right)\\
 \end{align*}
 
 The statement in the problem is that the sum of these two forces is directly downwards, that is the $x$-components should cancel each other, 
 \begin{align*}
-\frac{kq_1q_3}{18}\,\frac{1}{\sqrt{2}} -
-\frac{kq_2q_3}{58}\,\frac{7}{\sqrt{58}}= kq_3\left( \frac{q_1}{18\sqrt{2}}-\frac{7q_2}{58\sqrt{58}}\right) = 0\,,
+-\frac{k|q_1q_3|}{18}\,\frac{1}{\sqrt{2}} +
+\frac{k|q_2q_3|}{58}\,\frac{7}{\sqrt{58}}= k|q_3|\left( -\frac{|q_1|}{18\sqrt{2}}+\frac{7|q_2|}{58\sqrt{58}}\right) = 0\,,
 \end{align*}
 from which we can find $q_2$ by plugging in the value of $q_1$, 
 \begin{align*}
-\frac{1}{18\sqrt{2}}-\frac{7q_2}{58\sqrt{58}} = 0\,,
+-\frac{1}{18\sqrt{2}}+\frac{7|q_2|}{58\sqrt{58}} = 0\,,
 \end{align*}
-thus $q_2 = 2.48$\,C. Now the electric field at $\vec{x}_3 = (3,3)$\,m is in fact the electric force experienced by $q_3$ divided by $q_3$, that is, 
+thus $q_2 = 2.48$\,C (the sign of $q_2$ has to be positive, otherwise the $x$-components cannot cancel each other out based on the geometry, as both forces will be pushing $q_3$ to the left if $q_2$ was negative). Now the electric field at $\vec{x}_3 = (3,3)$\,m is in fact the electric force experienced by $q_3$ divided by $q_3$ (note that $q_3$ is negative), that is, 
 \begin{align*}
 \vec{E}(\vec{x}_3) = \frac{\vec{F}_{13} + \vec{F}_{23}}{q_3} = \left(
-\frac{kq_1}{18\sqrt{2}} - \frac{kq_2}{58}\frac{7}{\sqrt{58}}\,,\
-\frac{kq_1}{18\sqrt{2}} + \frac{kq_2}{58}\frac{3}{\sqrt{58}}
+\frac{k|q_1|}{18\sqrt{2}} - \frac{k|q_2|}{58}\frac{7}{\sqrt{58}}\,,\
+\frac{k|q_1|}{18\sqrt{2}} + \frac{k|q_2|}{58}\frac{3}{\sqrt{58}}
 \right) \, \text{N/C}\,.
 \end{align*}
 Plug in $q_1 = 1$\,C and $q_2=2.48$\,C we find
