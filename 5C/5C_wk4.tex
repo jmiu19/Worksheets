@@ -31,7 +31,7 @@ Department of Physics and Astronomy, UCLA\\
 \noindent\textbf{Problem 1}:
 We have seen this problem and its calculation using electric field and electric forces, now we will work through it using electric potential and energy. In this problem, neglect friction and gravity. 
 \begin{center}
-\includegraphics[scale=0.8]{chargeTriangle}
+\includegraphics[scale=0.8]{trianglePotential}
 \end{center}
 \noindent Charge $q_2=2.5\,$C is fixed at $\vec{x}_2 = (10 ,0)$\,m;\\
 Charge $q_1 = 1\,$C is fixed at $\vec{x}_1 = (0,0)$\,m; \\ 
@@ -43,7 +43,7 @@ The Coulomb constant $k = 8.99 \cdot 10^9$\,Nm$^2$/C$^2$, and the mass of electr
 
 
 \begin{center}
-\includegraphics[scale=0.8]{chargeTriangle}
+\includegraphics[scale=0.8]{trianglePE}
 \end{center}
 \noindent Now we place another charge $q_3=-1$\,C at $\vec{x}_i = (3,3)$\,m. \\
 
@@ -57,20 +57,25 @@ Suppose in a $2$-dimensional region we have an electric potential $V(x) = x+10$ 
 
 \noindent\textbf{Part (a)}: Draw in the coordinate system a few equipotential lines, and label their potential. Then draw the electric field lines based on the equipotential lines.\\
 
+\begin{center}
+\includegraphics[scale=0.8]{gauge}
+\end{center}
+
 \noindent\textbf{Part (b)}: Find the electric field in its vector form $\vec{E} = (E_x,\, E_y)$ at $\vec{x}_1 = (1,0)$\,m.\\
 
 \noindent\textbf{Part (c)}: Find the electric field in its vector form $\vec{E} = (E_x,\, E_y)$ at $\vec{x}_2 = (3,3)$\,m.\\
 
-\noindent\textbf{Part (d)}: If the electric potential is $V(x) = x + 666666$ instead, find the electric field at position $\vec{x}_1=(1,0)$\,m and at position $\vec{x}_2 = (3,3)\,$m.\\
-
+\noindent\textbf{Part (d)}: If the electric potential is $V(x) = x + 233333$ instead, find the electric field at position $\vec{x}_1=(1,0)$\,m and at position $\vec{x}_2 = (3,3)\,$m.\\
 
 
 
 \newpage
 \section*{Problem 1}
-It is unclear how we can draw the equipotential lines in this configuration, but we know the relation between electric field lines and equipotential lines - electric field lines are always perpendicular to the equipotential lines - so we can use this fact to draw the equipotential lines.\\
-
-\noindent Notice at all points where the blue lines (electric field lines) intersect with the read lines (equipotential lines), the two are perpendicular to each other.\\
+It is unclear how we can draw the equipotential lines in this configuration, but we know the relation between electric field lines and equipotential lines - electric field lines are always perpendicular to the equipotential lines - so we can use this fact to draw the equipotential lines.
+\begin{center}
+\includegraphics[scale=0.8]{mountains}
+\end{center}
+\noindent Notice at all points where the blue lines (electric field lines) intersect with the read lines (equipotential lines), the two are perpendicular to each other. The blue lines on the right is denser than the blue lines on the left, and this is because the charge on the right is ``larger" than the charge on the left. The equipotential lines form a ``contour map," like the top view of two mountains, with the one on the right slightly larger than the one on the left.\\
 
 At a point $\vec{x}$ between the two charges, we can first find the electric potential $V_1$ at $\vec{x}$ due to $q_1$ on the left, then find the electric potential $V_2$ at $\vec{x}$ due to $q_2$ on the right, and sum the two to get the total potential at $\vec{x}$. Here $V_1$ is first computed, 
 \begin{align*}
@@ -128,7 +133,10 @@ We notice that $U_i$ is exactly the same as $U_f$ (with $U_i$ computed above at 
 This indicates that $\vec{x}_i=(3,3)$\,m and $\vec{x}_f = (3,-3)\,$m are on the same equipotential line, as they have the same potential due to $q_1$ and $q_2$, such that $q_3$ has the same electric potential energy at the two points. \textbf{It is a fact that, if friction is neglected, it takes zero work for moving a test charge from one point on an equipotential line to another point on the same equipotential line.} There is another point of view that we can understand this: It takes negative amount of work $W_1$ to move $q_3$ from $(3,3)\,$m to $(3,0)$\,m because the electric force on $q_3$ is helping us, but it takes positive amount of work $W_2$ to move $q_3$ from $(3,0)$\,m to $(3,-3)\,$m because the electric force on $q_3$ is no-longer helping us. In fact, from $(3,0)$\,m to $(3,-3)$\,m, the electric force is ``counter-helping" us. You can verify that the electric force is trying to pull $q_3$ upwards when $q_3$ travels from $(3,0)$\,m to $(3,-3)$\,m. Therefore, in the entire process, we have $W_1 +W_2 = 0$, the positive and the negative works cancel exactly. \\
 
 \section*{Problem 2}
-Again, as in Problem 1, the electric field lines should be perpendicular to the equipotential lines. Along each equipotential line, we have the same electric potential. Since $V(x)$ depends only on $x$, the equipotential lines are vertical straight lines in the region. Therefore, the electric field lines are straight lines in the horizontal direction, pointing from large potential to small potential (because positive charge creates positive electric potential while negative charges create negative electric potential). \\
+Again, as in Problem 1, the electric field lines should be perpendicular to the equipotential lines. Along each equipotential line, we have the same electric potential. Since $V(x)$ depends only on $x$, the equipotential lines are vertical straight lines in the region. Therefore, the electric field lines are straight lines in the horizontal direction, pointing from large potential to small potential (because positive charge creates positive electric potential while negative charges create negative electric potential). 
+\begin{center}
+\includegraphics[scale=0.8]{grid}
+\end{center}
 
 To find the electric field from the given potential $V(x) = x+10$, we need to use the relation 
 \begin{align*}
@@ -156,13 +164,17 @@ but a more straightforward way to see this is from the fact that $V(x)$ does not
 at either $\vec{x}_1 = (1,0)$\,m or $\vec{x}_2 = (3,3)\,$m, as we just argued that such a unit change in $V$ does not depend on where we measure it. In fact, the quantity $\Delta V/\Delta x$ is the slope of line $V(x)$, and therefore, $\vec{E}$ is sort of the negative ``slope" of $V$ (in higher-dimensional space, this is called the negative gradient of $V$). Also due to this, we see that only the coefficient in front of $x$ in $V(x)$ matters, the $+10$ in $V(x)=x+10$ does not matter at all. There is a special name for that constant term ``$+10$" in Physics: It is called the gauge in $V(x)$. The statement is that changing the gauge in $V(x)$ does not change the electric field $\vec{E}$ at all. \\
 
 
-In the argument above, we see that the constant term ``$+10$" in the original $V(x)$ does not matter, then the electric fields at $\vec{x}_1$ and $\vec{x}_2$, even if we change to $V(x)= x+ 666666$, stay the same as before,
+In the argument above, we see that the constant term ``$+10$" in the original $V(x)$ does not matter, then the electric fields at $\vec{x}_1$ and $\vec{x}_2$, even if we change to $V(x)= x+ 233333$, stay the same as before,
 \begin{align*}
 \vec{E} = (-1,\,0)\,\text{N/m}\,.
 \end{align*}
 This corresponds to a statement that you have learned in Physics 5A: The value of energy does not matter, only the energy difference between two points in space matters. That is, the statement here is that the \textbf{value of electric potential does not matter, but the electric potential difference at two different points does matter}, and we have used this exact statement in our calculation of Problem 1 Parts (c) and (d). 
 
-
+\begin{center}
+\includegraphics[scale=0.15]{line1}\\
+\hfill\break
+The photo of this week is metro lines in Guangzhou, China.\ \ \ :D
+\end{center}
 
 
 
