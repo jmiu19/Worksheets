@@ -31,28 +31,196 @@ Department of Physics and Astronomy, UCLA\\
 \noindent Consider the following configuration:\\
 A charge $q_1=-1\,$C is fixed at $\vec{x}_1 =(0,0)\,$m.\\
 A charge $q_2=1\,$C is fixed at $\vec{x}_2 =(1,-1)\,$m.\\
-Jinyan is trying to bring in a test charge $q_3=1\,$C from infinitely far away at $\vec{x}_i = (\infty,0)$\,m to the destination point $\vec{x}_f = (1,0)\,$m. We will discuss this process from two perspectives, first using electric potential and energy, then using electric field and forces.\\
+Jinyan is trying to bring in a test charge $q_3=1\,$C from infinitely far away at $\vec{x}_i = (\infty,0)$\,m to the target location at $\vec{x}_f = (1,0)\,$m. We will discuss this process from two perspectives, first using electric potential and energy, then using electric field and forces.\\
+\begin{center}
+\includegraphics[scale=0.85]{bringCharge}
+\end{center}
 
 \noindent First we consider the picture of electric potential.\\
-\noindent\textbf{Part (a)} Compute the electric potential at $\vec{x}_i$ and $\vec{x}_f$ to the source charges $q_1$ and $q_2$.\\
+\noindent\textbf{Part (a)} Compute the electric potential at $\vec{x}_i$ and $\vec{x}_f$ due to $q_1$ and $q_2$ combined.\\
 \noindent\textbf{Part (b)} Compute the electric potential energy stored in $q_3$ at $\vec{x}_i$ and $\vec{x}_f$.\\
 \noindent\textbf{Part (c)} How much energy is needed to bring $q_3$ from $\vec{x}_i$ to $\vec{x}_f$? \\
 \noindent\textbf{Part (d)} If $q_3$ is fixed at $\vec{x}_f = (1,0)\,$m, compute the potential energy stored in $q_2$. \\
-\noindent\textbf{Part (e)} What is the total energy needed to assemble the three-charge system? \footnote{That is, this should be a three-step calculation: Step 1 - Starting with a vacuum, nothing in space, find the energy to put $q_1$ at the origin $\vec{x}_1$; Step 2 - With only $q_1$ fixed at the origin, find the energy needed to bring in $q_2$ from infinity to $\vec{x}_2 = (1,-1)\,$m; Step 3 - With $q_1$ and $q_2$ fixed at their locations, find the energy needed to bring in $q_3$ from infinity to $\vec{x}_f$. Sum these energy to find the total energy stored in such a system.}\\
+\noindent\textbf{Part (e)} What is the total energy needed to assemble the three-charge system? \footnote{That is, this should be a three-step calculation: Step 1 - Starting with a vacuum, nothing in space, find the energy to put $q_1$ at the origin $\vec{x}_1$; Step 2 - With only $q_1$ fixed at the origin, find the energy needed to bring in $q_2$ from infinity to $\vec{x}_2 = (1,-1)\,$m; Step 3 - With $q_1$ and $q_2$ fixed at their locations, find the energy needed to bring in $q_3$ from infinity to $\vec{x}_f$. Sum these energies to find the total energy stored in such a system.}\\
 
 \noindent Now let us consider the picture of electric field.\\
 \noindent\textbf{Part (f)} Draw the electric field lines due to the source charges $q_1$ and $q_2$ combined.\\
 \noindent\textbf{Part (g)} Compute the net electric field due to $q_1$ and $q_2$ combined, at $\vec{x}_i$ and at $\vec{x}_f$.\\
-\noindent\textbf{Part (h)} Compute the net force that $q_3$ experiences when it is at $\vec{x}_i$ and at $\vec{x}_f$. \\\
+\noindent\textbf{Part (h)} Compute the net force that $q_3$ experiences when it is at $\vec{x}_i$ and at $\vec{x}_f$. \\
 \noindent\textbf{Part (i)} Jinyan flips the sign of $q_3$ when it is at $\vec{x}_f$. What gets changed in this picture?\\
 
 \noindent Now we explore the relation between electric field and electric potential. \\
 Consider only the source charges $q_1$ and $q_2$, that is, neglect the test charge $q_3$.\\
-\noindent\textbf{Part (j)} Find the location (other than very far away) where we have the ``net" electric potential being zero. At that location, find the magnitude of the electric field. Qualitatively describe the relation between electric field and electric potential. 
+\noindent\textbf{Part (j)} Find the location (other than very far away) where we have the ``net" electric potential being zero. Pick one of those locations and compute the magnitude of the electric field at that location. Qualitatively describe the relation between electric field and electric potential. 
 
-\newpage
-\section*{Solution}
+%\newpage
+%\section*{Solution}
+%\noindent\textbf{Part (a)} First we compute the electric potential due to the two source charges $q_1$ and $q_2$. Remember that electric potential is a scalar, so we just add the contributions from the two charges directly. For $q_3$ at infinity, it is infinitely far away from $q_1$ and $q_2$, so we can approximate the quantity $1/r$ to be zero, that is 
+%\begin{align*}
+%V_i = \frac{kq_1}{r_{13}} + \frac{kq_2}{r_{23}} \approx \frac{kq_1}{\infty} + \frac{kq_2}{\infty} \approx 0\,\text{V}\,.
+%\end{align*}
+%At the final position $\vec{x}_f=(1,0)$\,m, the distance from $q_1$ to $\vec{x}_f$ is $1$\,m, and the distance from $q_2$ to $\vec{x}_f$ is also $1$\,m. Therefore,
+%\begin{align*}
+%V_f = \frac{kq_1}{1}+\frac{kq_2}{1}
+%= \frac{k(-1\,\text{C})}{1\,\text{m}}+\frac{k(1\,\text{C})}{1\,\text{m}}=0\,\text{V}\,.
+%\end{align*}
+%This cancellation happens because $\vec{x}_f$ is equally far away from the two charges, and the two charges have equal magnitude but opposite signs, but it does not mean that the charge $q_3$ feels a zero net force at $\vec{x}_f$, nor that the electric field at $\vec{x}_f$ is zero, as we will see in the second half of this problem. \\
+%
+%\noindent\textbf{Part (b)} The electric potential energy of $q_3$ is
+%\begin{align*}
+%U = q_3V\,.
+%\end{align*}
+%Since $q_3=1$\,C, we have
+%\begin{align*}
+%U_i = q_3V_i = (1\,\text{C})(0\,\text{V})=0\,\text{J}\,,\qquad
+%U_f = q_3V_f = (1\,\text{C})(0\,\text{V})=0\,\text{J}\,.\\
+%\end{align*}
+%
+%\noindent\textbf{Part (c)} If we slowly bring $q_3$ from $\vec{x}_i$ to $\vec{x}_f$, the energy that we need to spend is the change in electric potential energy,
+%\begin{align*}
+%\text{External Work}= U_f-U_i = 0-0=0\,\text{J}\,.
+%\end{align*}
+%So in this particular case, it takes zero net energy to bring $q_3$ from infinity to $\vec{x}_f$. Again, this is a statement about energy difference, not a statement that the electric force is zero everywhere along the path. If you sketch the equipotential lines of the electric potential created by $q_1$ and $q_2$ combined, you will see that, when moving $q_3$ from infinity to $\vec{x}_f$, the electric potential energy stored in $q_3$ first increases (from $0$ to some positive number $E$), then decreases (from the positive number $E$ back to $0$). This is similar to rolling a solid sphere up and down a mountain, but the starting point and the ending point have the same height, so the gravitational potential energy $U_g = mgh$ is the same at the two points, and thus it seems like it takes zero energy to move between the two points, but the full story is, initially you put in some work to move the sphere up to the top of the mountain, then gravity is helping you to move the sphere from the top of the mountain down to the final destination. In the first half of the journey, you perform positive work to counteract the gravity, and in the second half, you perform negative work which cancels exactly with the positive work done in the first half. \\
+%
+%\noindent\textbf{Part (d)} Now suppose $q_3$ is fixed at $\vec{x}_f=(1,0)$\,m, and we ask about the potential energy stored in $q_2$. Then $q_2$ feels the electric potential due to the other two charges, $q_1$ and $q_3$. In this part, we are essentially treating $q_2$ as a test charge, with $q_1$ and $q_3$ being source charges. The distance between $q_2$ and $q_1$ is
+%\begin{align*}
+%r_{21}=\sqrt{(1-0)^2+(-1-0)^2} \,\text{m}=\sqrt{2}\,\text{m}\,,
+%\end{align*}
+%and the distance between $q_2$ and $q_3$ is
+%\begin{align*}
+%r_{23}=1\,\text{m}\,.
+%\end{align*}
+%Therefore, the electric potential at the position of $q_2$ due to $q_1$ and $q_3$ is
+%\begin{align*}
+%V(\vec{x}_2)=\frac{kq_1}{r_{21}}+\frac{kq_3}{r_{23}}
+%=-\frac{k}{\sqrt{2}}+k\,.
+%\end{align*}
+%Since $q_2=1$\,C, the potential energy stored in $q_2$ is
+%\begin{align*}
+%U_2=q_2V
+%= k\left(1-\frac{1}{\sqrt{2}}\right)
+%=2.63\cdot 10^9\,\text{J}\,,
+%\end{align*}
+%where I used $k=8.99\cdot 10^9$\,Nm$^2$/C$^2$ in the last step.\\
+%
+%\noindent\textbf{Part (e)} To assemble the three-charge system, we should add the energy needed in each step, without double-counting the same pair of charges. We do this following the hint in the problem.\\
+%
+%\noindent Step 1: Starting from empty space, bring in $q_1$. Since there are no other charges yet, it is really really really easy to move $q_1$ around in space, this costs
+%\begin{align*}
+%W_1=0\,\text{J}\,.
+%\end{align*}
+%
+%\noindent Step 2: Now bring in $q_2$ while $q_1$ is already fixed at the origin. Then $q_2$ will feel an electric force due to $q_1$, and that affects how much energy we need to put in when trying to move $q_2$ from infinity to the target location at $\vec{x}_2$. As we have seen above (similar to the calculation that we have for bringing in $q_3$), at infinity, $q_2$ has zero potential energy, thus we only care about the potential energy of $q_2$ at the target location $\vec{x}_2 = (1,-1)$. At the target location, the distance between $q_1$ and $q_2$ is $\sqrt{2}$\,m, so
+%\begin{align*}
+%W_2=U_f - U_i = U_f - 0 = U_f = \frac{kq_1q_2}{\sqrt{2}}
+%=-\frac{k}{\sqrt{2}}\,.
+%\end{align*}
+%This is negative because $q_1$ and $q_2$ have opposite signs, so the attractive electric force between $q_1$ and $q_2$ helps us bring $q_2$ in.\\
+%
+%\noindent Step 3: Now bring in $q_3$ while $q_1$ and $q_2$ are already fixed. We have calculated the energy needed to bring in $q_3$ in part (c), this is
+%\begin{align*}
+%W_3=0\,\text{J}\,.
+%\end{align*}
+%Therefore, the total energy needed to assemble the system is
+%\begin{align*}
+%W_{\text{total}}=W_1+W_2+W_3
+%=-\frac{k}{\sqrt{2}}
+%=-6.36\cdot 10^9\,\text{J}\,.
+%\end{align*}
+%Equivalently, we can add the potential energies of the three pairs:
+%\begin{align*}
+%U_{\text{total}}
+%=\frac{kq_1q_2}{r_{12}}+\frac{kq_1q_3}{r_{13}}+\frac{kq_2q_3}{r_{23}}
+%=-\frac{k}{\sqrt{2}}-k+k
+%=-\frac{k}{\sqrt{2}} =-6.36\cdot 10^9\,\text{J}\,.
+%\end{align*}
+%This gives the same result.\\
+%
+%\noindent\textbf{Part (f)} Qualitatively, the electric field lines should start from the positive charge $q_2$ and end on the negative charge $q_1$. Since $q_1$ and $q_2$ have equal magnitude, every field line that leaves $q_2$ should eventually terminate on $q_1$. The picture should look like a dipole field, tilted along the line connecting $(1,-1)$ and $(0,0)$.
+%\begin{center}
+%\includegraphics[scale=0.85]{tiltedField}
+%\end{center}
+%
+%
+%\noindent\textbf{Part (g)} At $\vec{x}_i=(\infty,0)$\,m, infinitely far away from the two source charges, the ``distances" in
+%\begin{align*}
+%\vec{E} = \frac{kq_1}{\text{(``distance")}^2} + \frac{kq_2}{\text{(``distance")}^2}
+%\end{align*}
+%are really large such that the fractions are essentially zero. Therefore, the electric field is
+%\begin{align*}
+%\vec{E}_i=(0,0)\,\text{N/C}\,.
+%\end{align*}
+%At $\vec{x}_f=(1,0)$\,m, we compute the electric field due to each source charge. Considering $q_1$ only, the negative charge $q_1$ attracts a positive test charge toward the origin, so the field at $\vec{x}_f$ due to $q_1$ points directly left,
+%\begin{align*}
+%\vec{E}_1=\left(- \frac{k|q_1|}{r^2}\,,\ 0\right) = (-8.99\cdot 10^9\,,\ 0)\,\text{N/C}\,.
+%\end{align*}
+%The positive charge $q_2$ pushes a positive test charge away from $(1,-1)$, so at $\vec{x}_f=(1,0)$ the field due to $q_2$ points directly upward, 
+%\begin{align*}
+%\vec{E}_2=\left(0\,,\ \frac{k|q_2|}{r^2}\right) = (0\,,\ 8.99\cdot 10^9)\,\text{N/C}\,.
+%\end{align*}
+%Adding the two contributions,
+%\begin{align*}
+%\vec{E}_f=\vec{E}_1+\vec{E}_2
+%=(-8.99\cdot 10^9,\ 8.99\cdot 10^9)\,\text{N/C}\,.
+%\end{align*}
+%So the electric field at $\vec{x}_f$ is not zero, even though the electric potential at $\vec{x}_f$ is zero.\\
+%
+%\noindent\textbf{Part (h)} The electric force on $q_3$ is
+%\begin{align*}
+%\vec{F}=q_3\vec{E}\,.
+%\end{align*}
+%We only need to scale what we have obtained for $\vec{E}$ at the initial and final positions. Since $q_3=1$\,C, 
+%\begin{align*}
+%\vec{F}_i=(0,0)\,\text{N}\,,\qquad
+%\vec{F}_f
+%=(-8.99\cdot 10^9,\ 8.99\cdot 10^9)\,\text{N}\,.
+%\end{align*}
+%The force at $\vec{x}_f$ points up and to the left.\\
+%
+%\noindent\textbf{Part (i)} If Jinyan flips the sign of $q_3$ at $\vec{x}_f$, then \textbf{the electric potential $V$ and the electric field $\vec{E}$ due to the source charges $q_1$ and $q_2$ do not change}. These quantities are properties of the source charges, so they are defined by how and where you put the source charges. They have no relation with the test charge $q_3$.\\
+%
+%What does change is the force on $q_3$, because
+%\begin{align*}
+%\vec{F}=q_3\vec{E}\,.
+%\end{align*}
+%After the sign flip, $q_3=-1$\,C, so at $\vec{x}_f$,
+%\begin{align*}
+%\vec{F}_f=(-1)\cdot (-8.99\cdot 10^9,\ 8.99\cdot 10^9)\,\text{N}\,.
+%\end{align*}
+%Thus the force reverses direction (the field does not reverse direction, and the potential does not change sign). The potential energy $U=q_3V$ also changes sign in general, but at $\vec{x}_f$ we have $V_f=0$, so in this special location the potential energy is still zero.\\
+%
+%\noindent\textbf{Part (j)} The net electric potential due to $q_1$ and $q_2$ is zero whenever the two contributions from $q_1$ and $q_2$ cancel,
+%\begin{align*}
+%\frac{kq_1}{r_1}+\frac{kq_2}{r_2}=0\,.
+%\end{align*}
+%Since $q_1=-1$\,C and $q_2=1$\,C, this becomes
+%\begin{align*}
+%-\frac{k}{r_1}+\frac{k}{r_2}=0\,,
+%\end{align*}
+%so we need
+%\begin{align*}
+%r_1=r_2\,.
+%\end{align*}
+%In words, the net potential is zero at every point that is equally far away from $q_1$ and $q_2$. Geometrically, if you plot some of these points, you see that the line
+%\begin{align*}
+%y=x-1\,
+%\end{align*}
+%in the coordinate system captures all of them. Therefore, there is a whole line where the potential is zero. One convenient point on this line is the point we already used, $\vec{x}_f=(1,0)$\,m. At that point, from part (g),
+%\begin{align*}
+%\vec{E}_f=(-8.99\cdot 10^9,\ 8.99\cdot 10^9)\,\text{N/C}\,,
+%\end{align*}
+%so the magnitude of the electric field is
+%\begin{align*}
+%|\vec{E}_f|=\sqrt{(-8.99\cdot 10^9)^2+(8.99\cdot 10^9)^2}
+%=1.27\cdot 10^{10}\,\text{N/C}\,.
+%\end{align*}
+%The electric potential being zero does not imply electric field being zero. Rather, at a specific location, electric field tells us which way and how much the potential changes nearby (mathematically, this is called the gradient). As we discussed above, a close analogy to $V$ is a mountain (or a sink for $V$ produced by negative charge). A solid sphere in the gravity picture can stand at zero height but still be on a steep hill rolling towards negative height. In the electric case, the electric field points from higher potential toward lower potential, and it is perpendicular to the equipotential lines.\\
+%
+%Mathematically, \footnote{Review the week-4 worksheet for practical computation of this quantity.}
+%\begin{align*}
+%\vec{E} = -\nabla V = \left( -\frac{\partial V }{\partial x}\,,\ -\frac{\partial V}{\partial y}\right) \approx \left(-\frac{\Delta V}{\Delta x}\,,\ -\frac{\Delta V}{\Delta y}\right)
+%\end{align*}
+%As you can see here, $\vec{E}$ describes how $V$ changes in all directions, so only the ``change" matters. Two different lines $f(x)=114x$ and $f(x)=114x+514$ have the same slope of $114$ at every single point, which describes the change of $f(x)$ with respect to $x$, but at different points they satisfy $f(x) = 0$. The same argument applies to the relation between $\vec{E}$ and $V$. 
 
 \end{document}
-
 
