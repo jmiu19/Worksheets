@@ -9,11 +9,12 @@
 \usepackage{rsfso}
 \usepackage{amsthm}
 \usepackage{wasysym}
-\usepackage[inline]{enumitem}   
+\usepackage[inline]{enumitem}
 \usepackage{hyperref}
 \usepackage{tocloft}
 \usepackage{titlesec}
 \usepackage{colortbl}
+\usepackage[american]{circuitikz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -26,11 +27,6 @@ Department of Physics and Astronomy, UCLA\\
 %Office hours: Thursday 10-11 AM $\&$ 1-2 PM at PAB 2-429\\
 %Tutoring center hours: Friday 2-3 PM at PAB 2-429 (Zoom room also available)\\
 \noindent\rule{8cm}{0.4pt}\\
-%In order to make electron flow in a conductor to create a current, we need to apply a electric potential difference across the two ends of the conductor. Let us call the potential difference across the two ends as $V$, and the resulting current as $I$, we have the famous Ohm's Law, \footnote{You can think of this in this way: Imagine a cylindrical conductor. The top circular disk of it is positively charged and the bottom disk is negatively charged. Then electrons in the cylinder will want to move upwards towards the top disk due to the potential difference, and that creates a current.}
-%\begin{align*}
-%V=RI\,,
-%\end{align*}
-%where $R$ is the resistance of the conductor. As we discussed last week, $R$ represents how difficult it is for electrons to flow in a conductor.\\
 
 \noindent\textbf{Problem 1} Human body is a huge conductor with finite resistance. Across Jinyan's two dry hands, the resistance is around $R = 100\,$k$\Omega$, but an electric current as low as $90\,$mA can cause ventricular fibrillation. \\
 
@@ -54,7 +50,7 @@ Hypothetically, if Jinyan sticks his hands into the standard power outlet for $1
 
 
 \newpage
-\noindent \textbf{Problem 3} Jinyan's evil labmate Michael sneakily changes one of the wires. 
+\noindent \textbf{Problem 3} Jinyan's evil labmate Michael sneakily changes one of the wires.
 \begin{center}
 \includegraphics[scale=0.85]{circuitP3}
 \end{center}
@@ -76,6 +72,175 @@ Hypothetically, if Jinyan sticks his hands into the standard power outlet for $1
 \noindent\textbf{Part (h)} Find the power dissipated by resistor $B$.\\
 
 
+\newpage
+\section*{Problem 1}
+\noindent\textbf{Part (a)} We use Ohm's law,
+\begin{align*}
+V = IR\,,
+\end{align*}
+so the current through Jinyan is
+\begin{align*}
+I = \frac{V}{R} = \frac{120\,\text{V}}{100000\,\Omega} = 0.0012\,\text{A} = 1.2\,\text{mA}\,.
+\end{align*}
+This is much smaller than $90$\,mA, which is the value mentioned in the problem for ventricular fibrillation. So, according to this very rough dry-hands model, the current is below that dangerous threshold. However, it is still a terrible idea in real life. Human-body resistance can change a lot, especially if the skin is wet or damaged. I am enjoying my life and I don't want to scarify myself for science. Theory is theory, realistically it is still too risky to do as a demo.\\
+
+\noindent\textbf{Part (b)} The power delivered is
+\begin{align*}
+P = IV = (0.0012\,\text{A})(120\,\text{V}) = 0.144\,\text{W}\,.
+\end{align*}
+Recall that $1$ Watt means $1$ Joule per second, so in $10$ seconds the delivered energy is
+\begin{align*}
+E = Pt = (0.144\,\text{J/s})(10\,\text{s}) = 1.44\,\text{J}\,.
+\end{align*}
+But it takes around
+$20000\,\text{J}$
+to cook an egg, and $1.44$\,J is nowhere close to that. Therefore, in this simplified model, Jinyan will definitely not be cooked.\\
+
+\section*{Problem 2}
+
+\noindent\textbf{Part (a)} To analyze the circuit, first identify the two battery terminals. The top battery terminal is connected to the top node, and the bottom battery terminal is connected to the lower-left node. Between these same two nodes, resistor $B$ forms one branch, while resistors $C$ and $A$ together form another branch. Therefore, resistor $B$ is in parallel with the series combination of $C$ and $A$.\\
+
+\noindent The equivalent circuit is
+\begin{center}
+\begin{circuitikz}[scale=0.95, transform shape]
+\draw
+(0,0) to[battery1,l=$40\,\mathrm{V}$] (0,6)
+(0,6) -- (4,6) -- (4,5.5) -- (3,5.5) to[R] (3,0.5) -- (4,0.5) -- (4,0) -- (0,0)
+(0,6) -- (4,6) -- (4,5.5) -- (5,5.5) to[R] (5,3) to[R] (5,0.5) -- (4,0.5) -- (4,0) -- (0,0);
+\node at (3.8,3) {$5\,\Omega$};
+\node at (5.8,4.3) {$5\,\Omega$};
+\node at (5.8,1.8) {$15\,\Omega$};
+\end{circuitikz}
+\end{center}
+
+\noindent\textbf{Part (b)} In the branch that contains resistors $C$ and $A$, the two resistors are in series, so their equivalent resistance is
+\begin{align*}
+R_{CA} = R_C + R_A = 5\,\Omega + 15\,\Omega = 20\,\Omega\,.
+\end{align*}
+Since this whole branch is directly connected across the $40$\,V battery, the total voltage across the branch is $40$\,V. Therefore the current in this branch is
+\begin{align*}
+I_{CA} = \frac{40\,\text{V}}{20\,\Omega} = 2\,\text{A}\,.
+\end{align*}
+Because resistors $C$ and $A$ are in series, they carry the same current. So resistor $A$ carries a current $2$\,A, and thus the voltage drop across resistor $A$ is
+\begin{align*}
+V_A = I_A R_A = (2\,\text{A})(15\,\Omega) = 30\,\text{V}\,.
+\end{align*}
+So the voltage drop across resistor $A$ is
+\begin{align*}
+V_A = 30\,\text{V}\,.
+\end{align*}
+
+\noindent\textbf{Part (c)} A voltmeter should always be connected in parallel with the component whose voltage you want to measure. So you should place one probe on each end of resistor $A$. If you want a positive reading on the voltmeter, make sure to place the probes following the direction of the current in the circuit.\\
+
+\section*{Problem 3}
+Here, resistor $B$ is the only resistor that is actually connected across the battery. The pair $A$ and $C$ is disconnected from the battery and forms an isolated subcircuit.\\
+
+\noindent\textbf{Part (a)} The equivalent circuit is
+\begin{center}
+\begin{circuitikz}[scale=0.95, transform shape]
+\draw
+(0,0) to[battery1,l=$40\,\mathrm{V}$] (0,4)
+(0,4) -- (2,4) to[R] (2,0) -- (0,0);
+\node at (2.8,2) {$5\,\Omega$};
+\end{circuitikz}
+\end{center}
+Resistor $B$ is the only component powered by the battery.\\
+
+\noindent\textbf{Part (b)} Since resistor $B$ is directly across the $40$\,V battery,
+\begin{align*}
+I_B = \frac{V}{R_B} = \frac{40\,\text{V}}{5\,\Omega} = 8\,\text{A}\,.
+\end{align*}
+Now consider resistor $A$. The loop containing $A$ and $C$ is not connected to the battery, so there is no source pushing charges around that loop. Therefore,
+\begin{align*}
+I_A = 0\,\text{A}\,.
+\end{align*}
+So the answers are
+\begin{align*}
+I_A = 0\,\text{A}\,,\qquad I_B = 8\,\text{A}\,.
+\end{align*}
+
+\noindent\textbf{Part (c)} An ammeter should be connected in series with the component whose current you want to measure. So you should break the branch containing resistor $A$ and insert the ammeter into that branch. In this problem it should read $0\,\text{A}$ because there is no current through resistor $A$.\\
+
+\section*{Problem 4}
+In this configuration, nothing is shorted out. Resistor $A$ is in series with the parallel combination of $B$ and $C$.\\
+
+\noindent\textbf{Part (a)} The equivalent circuit is
+\begin{center}
+\begin{circuitikz}[scale=0.95, transform shape]
+\draw
+(0,0) to[battery1,l=$40\,\mathrm{V}$] (0,6)
+(0,6) -- (4,6) -- (4,5.5) to[R] (4,3.5) -- (4,3)
+(4,3) -- (3,3) to[R] (3,0.5) -- (4,0.5)
+(4,3) -- (5,3) to[R] (5,0.5) -- (4,0.5) -- (4,0) -- (0,0);
+\node at (4.8,4.5) {$15\,\Omega$};
+\node at (2.2,1.8) {$5\,\Omega$};
+\node at (5.8,1.8) {$5\,\Omega$};
+\end{circuitikz}
+\end{center}
+That is, $R_A \text{ is in series with } (R_B \parallel R_C)\,.$\\
+
+\noindent\textbf{Part (b)} Since resistors $B$ and $C$ are in parallel, their equivalent resistance is
+\begin{align*}
+\frac{1}{R_{BC}} = \frac{1}{R_B}+\frac{1}{R_C}
+= \frac{1}{5}+\frac{1}{5} = \frac{2}{5}\,,
+\end{align*}
+so
+\begin{align*}
+R_{BC} = \frac{5}{2}\,\Omega = 2.5\,\Omega\,.
+\end{align*}
+Now this parallel combination is in series with resistor $A$, so the total equivalent resistance is
+\begin{align*}
+R_{\text{eq}} = R_A + R_{BC} = 15\,\Omega + 2.5\,\Omega = 17.5\,\Omega\,.
+\end{align*}
+
+\noindent\textbf{Part (c)} The current through the battery is
+\begin{align*}
+I_{\text{battery}} = \frac{V}{R_{\text{eq}}} = \frac{40\,\text{V}}{17.5\,\Omega}
+= \frac{16}{7}\,\text{A} = 2.29\,\text{A}\,.
+\end{align*}
+
+\noindent\textbf{Part (d)} Because resistor $A$ is in series with the battery and the parallel branch, it carries the same current as the battery. Therefore,
+\begin{align*}
+I_A = I_{\text{battery}} = \frac{16}{7}\,\text{A} = 2.29\,\text{A}\,.
+\end{align*}
+
+\noindent\textbf{Part (e)} The voltage drop across resistor $A$ is
+\begin{align*}
+V_A = I_A R_A = \left(\frac{16}{7}\,\text{A}\right)(15\,\Omega)
+= \frac{240}{7}\,\text{V} = 34.3\,\text{V}\,.
+\end{align*}
+
+\noindent\textbf{Part (f)} The remaining voltage must be across the parallel branch containing $B$ and $C$, so
+\begin{align*}
+V_B = 40\,\text{V} - V_A
+= 40 - \frac{240}{7}
+= \frac{40}{7}\,\text{V}
+= 5.71\,\text{V}\,.
+\end{align*}
+Since $B$ and $C$ are in parallel, they have the same voltage drop.
+
+\noindent\textbf{Part (g)} Therefore the current through resistor $B$ is
+\begin{align*}
+I_B = \frac{V_B}{R_B} = \frac{(40/7)\,\text{V}}{5\,\Omega}
+= \frac{8}{7}\,\text{A} = 1.14\,\text{A}\,.
+\end{align*}
+
+\noindent\textbf{Part (h)} The power dissipated by resistor $B$ is
+\begin{align*}
+P_B = I_BV_B
+= \left(\frac{8}{7}\,\text{A}\right)\left(\frac{40}{7}\,\text{V}\right)
+= \frac{320}{49}\,\text{W}
+= 6.53\,\text{W}\,.
+\end{align*}
+Equivalently, you can compute
+\begin{align*}
+P_B = I_B^2R_B = \left(\frac{8}{7}\,\text{A}\right)^2(5\,\Omega)
+= \frac{320}{49}\,\text{W}
+= 6.53\,\text{W}\,.
+\end{align*}
+So the power dissipated by resistor $B$ is
+\begin{align*}
+P_B = 6.53\,\text{W}\,.
+\end{align*}
+
 \end{document}
-
-
