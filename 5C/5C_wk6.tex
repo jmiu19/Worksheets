@@ -104,7 +104,7 @@ to cook an egg, and $1.44$\,J is nowhere close to that. Therefore, in this simpl
 \begin{center}
 \begin{circuitikz}[scale=0.95, transform shape]
 \draw
-(0,0) to[battery1,l=$40\,\mathrm{V}$] (0,6)
+(0,0) to[battery1,invert,l=$40\,\mathrm{V}$] (0,6)
 (0,6) -- (4,6) -- (4,5.5) -- (3,5.5) to[R] (3,0.5) -- (4,0.5) -- (4,0) -- (0,0)
 (0,6) -- (4,6) -- (4,5.5) -- (5,5.5) to[R] (5,3) to[R] (5,0.5) -- (4,0.5) -- (4,0) -- (0,0);
 \node at (3.8,3) {$5\,\Omega$};
@@ -133,42 +133,37 @@ V_A = 30\,\text{V}\,.
 \noindent\textbf{Part (c)} A voltmeter should always be connected in parallel with the component whose voltage you want to measure. So you should place one probe on each end of resistor $A$. If you want a positive reading on the voltmeter, make sure to place the probes following the direction of the current in the circuit.\\
 
 \section*{Problem 3}
-Here, resistor $B$ is the only resistor that is actually connected across the battery. The pair $A$ and $C$ is disconnected from the battery and forms an isolated subcircuit.\\
+Here, resistor $B$ is the only resistor that is actually connected across the battery. Here is the reasoning: Track how the current goes in the circuit. It first comes out from the positive end of the battery, passes through resistor $B$, then it sees two paths - one is directly going back to the battery, the other one is passing through resistors $C$ and $A$ then back to the battery - It must chooses the one that has no resistance because it is smart. Thus there will be no current going through resistors $C$ and $A$, the pair $C$ and $A$ is disconnected from the battery and forms an isolated subcircuit. In this case, we say the path connecting $B$ to the negative end of the battery shorts the components $A$ and $C$.\\
 
-\noindent\textbf{Part (a)} The equivalent circuit is
+\noindent\textbf{Part (a)} From the argument above, $A$ and $C$ are shorted, so the equivalent circuit contains only resistor $B$. I can safely neglect $A$ and $C$ because there is no current going through them. Resistor $B$ is the only component powered by the battery.\\
 \begin{center}
 \begin{circuitikz}[scale=0.95, transform shape]
 \draw
-(0,0) to[battery1,l=$40\,\mathrm{V}$] (0,4)
+(0,0) to[battery1,invert,l=$40\,\mathrm{V}$] (0,4)
 (0,4) -- (2,4) to[R] (2,0) -- (0,0);
 \node at (2.8,2) {$5\,\Omega$};
 \end{circuitikz}
 \end{center}
-Resistor $B$ is the only component powered by the battery.\\
 
 \noindent\textbf{Part (b)} Since resistor $B$ is directly across the $40$\,V battery,
 \begin{align*}
 I_B = \frac{V}{R_B} = \frac{40\,\text{V}}{5\,\Omega} = 8\,\text{A}\,.
 \end{align*}
-Now consider resistor $A$. The loop containing $A$ and $C$ is not connected to the battery, so there is no source pushing charges around that loop. Therefore,
+As argued at the beginning, there is no current flowing through resistors $A$ and $C$. Therefore,
 \begin{align*}
 I_A = 0\,\text{A}\,.
-\end{align*}
-So the answers are
-\begin{align*}
-I_A = 0\,\text{A}\,,\qquad I_B = 8\,\text{A}\,.
 \end{align*}
 
 \noindent\textbf{Part (c)} An ammeter should be connected in series with the component whose current you want to measure. So you should break the branch containing resistor $A$ and insert the ammeter into that branch. In this problem it should read $0\,\text{A}$ because there is no current through resistor $A$.\\
 
 \section*{Problem 4}
-In this configuration, nothing is shorted out. Resistor $A$ is in series with the parallel combination of $B$ and $C$.\\
+In this configuration, nothing is shorted out. You can track how the current goes in the circuit from the positive end all the way to the negative end of the battery: Coming out from the battery, the current first see a junction splitting into two paths, one going through resistor $B$ and the one going through resistor $C$, then the two paths recombine. Thus resistors $B$ and $C$ are in parallel. Next, the current continues to pass through resistor $A$, and back to the battery, so the resistor $A$ is in series with the parallel combination of $B$ and $C$.\\
 
-\noindent\textbf{Part (a)} The equivalent circuit is
+\noindent\textbf{Part (a)} Here I draw the equivalent circuit based on my argument above. 
 \begin{center}
 \begin{circuitikz}[scale=0.95, transform shape]
 \draw
-(0,0) to[battery1,l=$40\,\mathrm{V}$] (0,6)
+(0,0) to[battery1,invert,l=$40\,\mathrm{V}$] (0,6)
 (0,6) -- (4,6) -- (4,5.5) to[R] (4,3.5) -- (4,3)
 (4,3) -- (3,3) to[R] (3,0.5) -- (4,0.5)
 (4,3) -- (5,3) to[R] (5,0.5) -- (4,0.5) -- (4,0) -- (0,0);
@@ -184,18 +179,14 @@ That is, $R_A \text{ is in series with } (R_B \parallel R_C)\,.$\\
 \frac{1}{R_{BC}} = \frac{1}{R_B}+\frac{1}{R_C}
 = \frac{1}{5}+\frac{1}{5} = \frac{2}{5}\,,
 \end{align*}
-so
-\begin{align*}
-R_{BC} = \frac{5}{2}\,\Omega = 2.5\,\Omega\,.
-\end{align*}
-Now this parallel combination is in series with resistor $A$, so the total equivalent resistance is
+from which we see $R_{BC} = 2.5\,\Omega\,.$ Now this parallel combination is in series with resistor $A$, so the total equivalent resistance is
 \begin{align*}
 R_{\text{eq}} = R_A + R_{BC} = 15\,\Omega + 2.5\,\Omega = 17.5\,\Omega\,.
 \end{align*}
 
-\noindent\textbf{Part (c)} The current through the battery is
+\noindent\textbf{Part (c)} Using the total equivalent resistance, we can find the current through the battery, using Ohm's Law,
 \begin{align*}
-I_{\text{battery}} = \frac{V}{R_{\text{eq}}} = \frac{40\,\text{V}}{17.5\,\Omega}
+I_{\text{battery}} = \frac{V_{\text{battery}}}{R_{\text{eq}}} = \frac{40\,\text{V}}{17.5\,\Omega}
 = \frac{16}{7}\,\text{A} = 2.29\,\text{A}\,.
 \end{align*}
 
@@ -204,20 +195,21 @@ I_{\text{battery}} = \frac{V}{R_{\text{eq}}} = \frac{40\,\text{V}}{17.5\,\Omega}
 I_A = I_{\text{battery}} = \frac{16}{7}\,\text{A} = 2.29\,\text{A}\,.
 \end{align*}
 
-\noindent\textbf{Part (e)} The voltage drop across resistor $A$ is
+\noindent\textbf{Part (e)} The voltage drop across resistor $A$ is then calculated from Ohm's Law,
 \begin{align*}
 V_A = I_A R_A = \left(\frac{16}{7}\,\text{A}\right)(15\,\Omega)
 = \frac{240}{7}\,\text{V} = 34.3\,\text{V}\,.
 \end{align*}
 
-\noindent\textbf{Part (f)} The remaining voltage must be across the parallel branch containing $B$ and $C$, so
+\noindent\textbf{Part (f)} After resistor $A$, the remaining voltage must be across the parallel branch containing $B$ and $C$, so
 \begin{align*}
-V_B = 40\,\text{V} - V_A
-= 40 - \frac{240}{7}
-= \frac{40}{7}\,\text{V}
+V_{BC} = V_{\text{battery}} - V_A
 = 5.71\,\text{V}\,.
 \end{align*}
-Since $B$ and $C$ are in parallel, they have the same voltage drop.
+Since $B$ and $C$ are in parallel, they have the same voltage drop. That is
+\begin{align*}
+V_B = V_C = V_{BC} = 5.71\,\text{V}\,.
+\end{align*}
 
 \noindent\textbf{Part (g)} Therefore the current through resistor $B$ is
 \begin{align*}
@@ -225,7 +217,7 @@ I_B = \frac{V_B}{R_B} = \frac{(40/7)\,\text{V}}{5\,\Omega}
 = \frac{8}{7}\,\text{A} = 1.14\,\text{A}\,.
 \end{align*}
 
-\noindent\textbf{Part (h)} The power dissipated by resistor $B$ is
+\noindent\textbf{Part (h)} The power dissipated by resistor $B$ is computed using what we have learned from Problem 1,
 \begin{align*}
 P_B = I_BV_B
 = \left(\frac{8}{7}\,\text{A}\right)\left(\frac{40}{7}\,\text{V}\right)
@@ -237,10 +229,6 @@ Equivalently, you can compute
 P_B = I_B^2R_B = \left(\frac{8}{7}\,\text{A}\right)^2(5\,\Omega)
 = \frac{320}{49}\,\text{W}
 = 6.53\,\text{W}\,.
-\end{align*}
-So the power dissipated by resistor $B$ is
-\begin{align*}
-P_B = 6.53\,\text{W}\,.
 \end{align*}
 
 \end{document}
