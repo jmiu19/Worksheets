@@ -70,10 +70,16 @@ Hypothetically, if Jinyan sticks his hands into the standard power outlet for $1
 \noindent\textbf{Part (f)} Find the voltage drop across resistor $B$.\\
 \noindent\textbf{Part (g)} Find the current through resistor $B$.\\
 \noindent\textbf{Part (h)} Find the power dissipated by resistor $B$.\\
-
+\noindent\textbf{Part (i)} What will happen if we change all the resistors to capacitors?
 
 \newpage
 \section*{Problem 1}
+In order to make electron flow in a conductor (such as your TA's body) to create a current, we need to apply an electric potential difference across the two ends of the conductor. Let us call the potential difference across the two ends as $V$, and the resulting current as $I$, we have the famous Ohm's Law, \footnote{You can think of this in this way: Imagine a cylindrical conductor. The top circular disk of it is positively charged and the bottom disk is negatively charged. Then electrons in the cylinder will want to move upwards towards the top disk due to the potential difference, and that creates a current.}
+\begin{align*}
+V=RI\,,
+\end{align*}
+where $R$ is the resistance of the conductor. As we discussed last week, $R$ represents how difficult it is for electrons to flow in a conductor.\\
+
 \noindent\textbf{Part (a)} We use Ohm's law,
 \begin{align*}
 V = IR\,,
@@ -82,7 +88,7 @@ so the current through Jinyan is
 \begin{align*}
 I = \frac{V}{R} = \frac{120\,\text{V}}{100000\,\Omega} = 0.0012\,\text{A} = 1.2\,\text{mA}\,.
 \end{align*}
-This is much smaller than $90$\,mA, which is the value mentioned in the problem for ventricular fibrillation. So, according to this very rough dry-hands model, the current is below that dangerous threshold. However, it is still a terrible idea in real life. Human-body resistance can change a lot, especially if the skin is wet or damaged. I am enjoying my life and I don't want to scarify myself for science. Theory is theory, realistically it is still too risky to do as a demo.\\
+This is much smaller than $90$\,mA, the approximate threshold for ventricular fibrillation. Then according to this very rough dry-hands model, the current is below that dangerous threshold. However, it is still a terrible idea in real life. Human-body resistance can change a lot, especially if the skin is wet or damaged (in which case the resistance might be lowered by more than a factor of $10$). I am enjoying my life and I don't want to scarify myself for science. Theory is theory, realistically it is still too risky to do it as a demo.\\
 
 \noindent\textbf{Part (b)} The power delivered is
 \begin{align*}
@@ -96,9 +102,10 @@ But it takes around
 $20000\,\text{J}$
 to cook an egg, and $1.44$\,J is nowhere close to that. Therefore, in this simplified model, Jinyan will definitely not be cooked.\\
 
+\newpage
 \section*{Problem 2}
 
-\noindent\textbf{Part (a)} To analyze the circuit, first identify the two battery terminals. The top battery terminal is connected to the top node, and the bottom battery terminal is connected to the lower-left node. Between these same two nodes, resistor $B$ forms one branch, while resistors $C$ and $A$ together form another branch. Therefore, resistor $B$ is in parallel with the series combination of $C$ and $A$.\\
+\noindent\textbf{Part (a)} To analyze the circuit, first identify the two battery terminals. The positive battery terminal is connected to the top node, and the negative battery terminal is connected to the lower-left node. Between these two nodes, resistor $B$ forms one branch, while resistors $C$ and $A$ together form another branch. Therefore, resistor $B$ is in parallel with the series combination of $C$ and $A$.\\
 
 \noindent The equivalent circuit is
 \begin{center}
@@ -117,7 +124,7 @@ to cook an egg, and $1.44$\,J is nowhere close to that. Therefore, in this simpl
 \begin{align*}
 R_{CA} = R_C + R_A = 5\,\Omega + 15\,\Omega = 20\,\Omega\,.
 \end{align*}
-Since this whole branch is directly connected across the $40$\,V battery, the total voltage across the branch is $40$\,V. Therefore the current in this branch is
+Since this whole branch is directly connected across the $40$\,V battery (and it is also in parallel with the $5\,\Omega$ resistor $B$), the total voltage across the branch is $40$\,V. Therefore the current in this branch is
 \begin{align*}
 I_{CA} = \frac{40\,\text{V}}{20\,\Omega} = 2\,\text{A}\,.
 \end{align*}
@@ -125,15 +132,13 @@ Because resistors $C$ and $A$ are in series, they carry the same current. So res
 \begin{align*}
 V_A = I_A R_A = (2\,\text{A})(15\,\Omega) = 30\,\text{V}\,.
 \end{align*}
-So the voltage drop across resistor $A$ is
-\begin{align*}
-V_A = 30\,\text{V}\,.
-\end{align*}
 
-\noindent\textbf{Part (c)} A voltmeter should always be connected in parallel with the component whose voltage you want to measure. So you should place one probe on each end of resistor $A$. If you want a positive reading on the voltmeter, make sure to place the probes following the direction of the current in the circuit.\\
 
+\noindent\textbf{Part (c)} A voltmeter should always be connected in parallel with the component whose voltage you want to measure. So you should place one probe on each end of resistor $A$ to get the voltage drop of $A$. If you want a positive reading on the voltmeter, make sure to place the probes following the direction of the current in the circuit.\\
+
+\newpage
 \section*{Problem 3}
-Here, resistor $B$ is the only resistor that is actually connected across the battery. Here is the reasoning: Track how the current goes in the circuit. It first comes out from the positive end of the battery, passes through resistor $B$, then it sees two paths - one is directly going back to the battery, the other one is passing through resistors $C$ and $A$ then back to the battery - It must chooses the one that has no resistance because it is smart. Thus there will be no current going through resistors $C$ and $A$, the pair $C$ and $A$ is disconnected from the battery and forms an isolated subcircuit. In this case, we say the path connecting $B$ to the negative end of the battery shorts the components $A$ and $C$.\\
+In this case, resistor $B$ is the only resistor that is actually connected across the battery. Here is the reasoning: Track how the current goes in the circuit. It first comes out from the positive end of the battery, passes through resistor $B$, then it sees two paths - one is directly going back to the battery, the other one is passing through resistors $C$ and $A$ then back to the battery - It must chooses the one that has no resistance because it is smart.\footnote{Again, you can think of this as traffic on a highway - You see one highway has no traffic at all, and the other one has. If both highways lead to the same destination, you will for sure choose the one that has no traffic. However, if both of them have some traffics, then people will make their decision based on proportionality of the traffics that they see in the two highways.} Thus there will be no current going through resistors $C$ and $A$. The pair $C$ and $A$ is disconnected from the battery and forms an isolated subcircuit. In this case, we say the path connecting $B$ to the negative end of the battery shorts the components $A$ and $C$.\\
 
 \noindent\textbf{Part (a)} From the argument above, $A$ and $C$ are shorted, so the equivalent circuit contains only resistor $B$. I can safely neglect $A$ and $C$ because there is no current going through them. Resistor $B$ is the only component powered by the battery.\\
 \begin{center}
@@ -149,15 +154,13 @@ Here, resistor $B$ is the only resistor that is actually connected across the ba
 \begin{align*}
 I_B = \frac{V}{R_B} = \frac{40\,\text{V}}{5\,\Omega} = 8\,\text{A}\,.
 \end{align*}
-As argued at the beginning, there is no current flowing through resistors $A$ and $C$. Therefore,
-\begin{align*}
-I_A = 0\,\text{A}\,.
-\end{align*}
+As argued at the beginning, there is no current flowing through resistors $A$ and $C$. Therefore, $I_A = 0\,\text{A}\,.$\\
 
 \noindent\textbf{Part (c)} An ammeter should be connected in series with the component whose current you want to measure. So you should break the branch containing resistor $A$ and insert the ammeter into that branch. In this problem it should read $0\,\text{A}$ because there is no current through resistor $A$.\\
 
+\newpage
 \section*{Problem 4}
-In this configuration, nothing is shorted out. You can track how the current goes in the circuit from the positive end all the way to the negative end of the battery: Coming out from the battery, the current first see a junction splitting into two paths, one going through resistor $B$ and the one going through resistor $C$, then the two paths recombine. Thus resistors $B$ and $C$ are in parallel. Next, the current continues to pass through resistor $A$, and back to the battery, so the resistor $A$ is in series with the parallel combination of $B$ and $C$.\\
+In this configuration, nothing is shorted out. You can track how the current goes in the circuit from the positive terminal all the way to the negative terminal of the battery: Coming out from the battery, the current first sees a junction splitting into two paths - one going through resistor $B$ and the one going through resistor $C$ - then the two paths recombine. Thus resistors $B$ and $C$ are in parallel. Next, the current continues to pass through resistor $A$, and back to the battery, so the resistor $A$ is in series with the parallel combination of $B$ and $C$.\\
 
 \noindent\textbf{Part (a)} Here I draw the equivalent circuit based on my argument above. 
 \begin{center}
@@ -201,7 +204,7 @@ V_A = I_A R_A = \left(\frac{16}{7}\,\text{A}\right)(15\,\Omega)
 = \frac{240}{7}\,\text{V} = 34.3\,\text{V}\,.
 \end{align*}
 
-\noindent\textbf{Part (f)} After resistor $A$, the remaining voltage must be across the parallel branch containing $B$ and $C$, so
+\noindent\textbf{Part (f)} Other than resistor $A$, the remaining voltage drop must be across the parallel branch containing $B$ and $C$, so
 \begin{align*}
 V_{BC} = V_{\text{battery}} - V_A
 = 5.71\,\text{V}\,.
@@ -230,5 +233,12 @@ P_B = I_B^2R_B = \left(\frac{8}{7}\,\text{A}\right)^2(5\,\Omega)
 = \frac{320}{49}\,\text{W}
 = 6.53\,\text{W}\,.
 \end{align*}
+
+\vspace*{\fill}
+\begin{center}
+\includegraphics[scale=0.1]{IMG_3027.jpg}\\
+\hfill\break
+Miku Expo @ LA Peacock Center in April 2026.
+\end{center}
 
 \end{document}
