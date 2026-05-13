@@ -224,7 +224,7 @@ Now resistor $R_1$ is replaced by a capacitor $C_1$ that is initially uncharged.
 \end{center}
 So at $t=0$, the capacitor can be ignored and the circuit is simply $R_2$ in parallel with $R_3$.\\
 
-\noindent\textbf{Part (b)} Since $R_2$ and $R_3$ are directly across the battery right after the circuit is completed, each branch has voltage $\varepsilon$ across it. Therefore,
+\noindent\textbf{Part (b)} Since $R_2$ and $R_3$ are directly across the battery (they are in parallel, and the parallel chunk is connected across the battery directly) right after the circuit is completed, each branch has voltage drop $\varepsilon$ across it. Therefore,
 \begin{align*}
 I_2(t=0) = \frac{\varepsilon}{R_2}
 = \frac{\varepsilon}{2R}\,,
@@ -235,31 +235,41 @@ I_3(t=0) = \frac{\varepsilon}{R_3}
 = \frac{\varepsilon}{3R}\,.
 \end{align*}
 
-\noindent\textbf{Part (c)} A decade later, the capacitor is fully charged. A fully charged capacitor behaves like an open circuit, and here the capacitor sits in series before the two resistor branches. Therefore the circuit is broken and no current can flow anywhere in the loop. Hence
+\noindent\textbf{Part (c)} A decade later, the capacitor is fully charged. A fully charged capacitor behaves like an open circuit, and here the capacitor sits in series before the two resistor branches. Therefore the circuit is broken and no current can flow anywhere in the circuit. Hence
 \begin{align*}
 I_2(t\to \infty)=0\,\text{A}\,,\qquad
 I_3(t\to \infty)=0\,\text{A}\,.
 \end{align*}
 
-\noindent\textbf{Part (d)} At long time, since the current through $R_2$ and $R_3$ is zero, the voltage drop across each resistor is also zero. Therefore the entire battery emf must appear across the capacitor,
+\noindent\textbf{Part (d)} At long time, since the current through $R_2$ and $R_3$ is zero, the voltage drop across each resistor is also zero because $V=IR$. Therefore the entire battery emf must appear across the capacitor,
 \begin{align*}
 V_C(t\to \infty)=\varepsilon\,.
 \end{align*}
+The reason that the charge capacitor will consume all supplied voltage from the battery is the following: Charging the capacitor means pumping charges to the capacitor, but storing more charges on the capacitor requires having a larger electric potential difference across the capacitor ($Q=CV$). The battery can supply an electric potential difference of $\epsilon$, thus it is able to pump charges to the capacitor until the potential difference across the capacitor reaches $\epsilon$.\\
 
-\noindent\textbf{Part (e)} When the capacitor is uncharged, the voltage across it is zero. The stored energy in a capacitor is
-\begin{align*}
-U_c = \frac{1}{2}CV^2\,.
-\end{align*}
-It is written in this form (instead of other forms that could be used to calculate the capacitor energy) because $C$ is given in the problem and we can find the voltage $V$ across the capacitor easily. At the initial time, the capacitor is uncharged, thus the voltage across it must be zero (since $C=Q/V$ for capacitance, then $V=Q/C$, so for an uncharged capacitor $Q=0$, we have $V = 0$),
-\begin{align*}
-U_{c,\text{uncharged}} = \frac{1}{2}C(0)^2 = 0\,\text{J}\,.
-\end{align*}
 
+A better way to understand this picture (when capacitor is fully charged) is that, the battery supplies a battery emf $\epsilon$ (this is a voltage gain if we go across the battery), and the capacitor will consume all of this voltage $\epsilon$ when it is fully charged (so there will be a voltage drop when we go across the capacitor). Therefore, there is no voltage left for the resistors (after the charged capacitor) to consume, and thus $I=V/R = 0$ for the resistors. \\ 
+
+
+
+\noindent\textbf{Part (e)} When the capacitor is uncharged, the amount of charged stored on the capacitor is zero, so we have $Q=0$. The stored energy in a capacitor is
+\begin{align*}
+U_C = \frac{1}{2}\frac{Q^2}{C}\,.
+\end{align*}
+It is written in this form (instead of other forms that could be used to calculate the capacitor energy) because the capacitance $C$ is given in the problem and we know that $Q=0$ when the capacitor is uncharged. Therefore, 
+\begin{align*}
+U_{C,\text{uncharged}} = \frac{1}{2}\frac{0^2}{C} =0\,\text{J}\,.
+\end{align*}
+At the initial time, the capacitor is uncharged, thus the voltage drop across it must be zero (since $C=Q/V$ for capacitance, then $V=Q/C$, so for an uncharged capacitor $Q=0$, we have $V = 0$). If you have this argument in your understanding and have it written down in your solution, you can also use
+\begin{align*}
+U_{C,\text{uncharged}} =\frac{1}{2}CV^2 =\frac{1}{2}C(0)^2 = 0\,\text{J}
+\end{align*}
+to justify that the capacitor stores zero energy when it is uncharged.\\
 
 
 \noindent\textbf{Part (f)} When the capacitor is fully charged, we just found from part (d) that the voltage across it is $\varepsilon$. Therefore,
 \begin{align*}
-U_{c,\text{charged}} = \frac{1}{2}C\varepsilon^2\,.
+U_{C,\text{charged}} = \frac{1}{2}C\varepsilon^2\,.
 \end{align*}
 
 \noindent\textbf{Part (g)} The amount of charge stored on one of the plates is related to capacitance and voltage by
@@ -272,7 +282,8 @@ Q = C\varepsilon\,.
 \end{align*}
 
 
-\noindent\textbf{Part (h)} Now a dielectric with $\kappa >1$ is inserted between the plates. The dielectric material changes the capacitance of the capacitor, and it does not affect the voltage across the capacitor. This is because the battery is the source of voltage in the circuit. If the battery and other resistive components in the circuit do not change, the voltage across the capacitor should not change. As you can verify, in our calculation of the voltage drop across the capacitor in part (d), it does not depend on the capacitance of the capacitor. Thus $V_C(t\to \infty)=\varepsilon$ is unchanged.
+\noindent\textbf{Part (h)} Now a dielectric with $\kappa >1$ is inserted between the plates. The dielectric material changes the capacitance of the capacitor. As long as the capacitor is still connected to the battery, the battery can pump more charges to the capacitor to maintain the potential difference across the capacitor (we also argued in part (d) that the capacitor will always try to consume all the voltage supplied by the battery). As you can verify, in our calculation of the voltage drop across the capacitor in part (d), it does not depend on the capacitance of the capacitor. Thus $V_C(t\to \infty)=\varepsilon$ is unchanged.\\
+
 However, due to the dielectric, the capacitance becomes
 \begin{align*}
 C'=\kappa C\,.
@@ -289,6 +300,13 @@ U'_c = \frac{1}{2}C'V^2
 \end{align*}
 so the stored energy also increases by a factor of $\kappa$.\\
 
+In another story, consider the case where the capacitor is disconnected from the circuit after it is being fully charged. If I then insert a dielectric material (assume $\kappa>1$) into the capacitor, again, the capacitance $C$ increases, but the voltage $V$ across the capacitor will decrease. This is because, the charge $Q$ stored in the capacitor is unchanged when the capacitor is disconnected from the circuit, then $V=Q/C$ decreases due to the increase in capacitance. Comparing the two stories here: One has the capacitor being connected to the battery at all time, so the battery can pump more charges to the capacitor to maintain the voltage across the capacitor. The other one has the capacitor being disconnected from the circuit, the amount of charges on the capacitor is maintained, and voltage across the capacitor will change correspondingly. \\
+
+
+
+
+
+
 \noindent\textbf{Part (i)} Now we include the internal resistance $r$ of the battery, but we are still looking at the moment right after the circuit is completed. As in part (a), the capacitor behaves like a wire at $t=0$, so the external circuit is just $R_2$ in parallel with $R_3$. The equivalent resistance of the parallel part of the circuit was computed in Part (b) of Problem 1,
 \begin{align*}
 R_{23} = \frac{6R}{5}\,.
@@ -303,7 +321,7 @@ I_{\text{battery}} = \frac{\varepsilon}{r+6R/5}
 = \frac{5\varepsilon}{5r+6R}\,.
 \end{align*}
 
-\noindent\textbf{Part (j)} The terminal voltage of the battery, which is also the voltage across the parallel resistor pair because that is the only thing connected to the battery, is then
+\noindent\textbf{Part (j)} Talking about the terminal voltage, we are looking at the voltage across the ``battery with its internal resistance." That is, we can consider a box that we call battery$+r$, and inside this box, we have the battery (with emf $\epsilon$) in series with a little resistor with resistance $r$. Then the terminal voltage is measuring the voltage across the two points right outside of the box. In this problem, outside of the box, the only thing that is in the circuit is the parallel resistor pair. Therefore, the terminal voltage of the battery is also the voltage across the parallel resistor pair (as they are the only thing connected to the battery+$r$ box),
 \begin{align*}
 V_{\text{parallel}} = I_{\text{battery}}R_{23}
 = \left(\frac{5\varepsilon}{5r+6R}\right)\left(\frac{6R}{5}\right)
@@ -313,7 +331,7 @@ Notice that this is the same as
 \begin{align*}
 V_{\text{parallel}} = \varepsilon - I_{\text{battery}}r = \varepsilon - \frac{5\varepsilon r}{5r+6R} = \frac{5r\varepsilon + 6R\varepsilon}{5r+6R} - \frac{5\varepsilon r}{5r+6R} = \frac{6R\varepsilon}{5r+6R}\,.
 \end{align*}
-This is the actual voltage supplied by the battery whenever it has an internal resistance. The logic should be clear: The battery provides an emf $\varepsilon$, and its internal resistance $r$ will ``consume'' part of the supplied voltage $\varepsilon$, thus the actual terminal voltage supplied by the battery is 
+This is the actual voltage supplied by the battery whenever it has an internal resistance. The logic should be clear: The battery provides an emf $\varepsilon$, and its internal resistance $r$ will consume part of the supplied voltage $\varepsilon$, thus the actual terminal voltage supplied by the battery is 
 \begin{align*}
 V_{\text{terminal}} = \varepsilon - I_{\text{battery}}r\,.
 \end{align*}
