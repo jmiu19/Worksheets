@@ -1,0 +1,242 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%Include Packages%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}, margin=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{rsfso}
+\usepackage{amsthm}
+\usepackage{wasysym}
+\usepackage[inline]{enumitem}   
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage[american]{circuitikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\Large \noindent \textbf{Physics 5C Discussion (Week 8)}\\
+\normalsize
+Department of Physics and Astronomy, UCLA\\
+%\noindent TA: Jinyan Miao (jnmiu@ucla.edu)\\
+%Office hours: Thursday 10-11 AM $\&$ 1-2 PM at PAB 2-429\\
+%Tutoring center hours: Friday 2-3 PM at PAB 2-429 (Zoom room also available)\\
+\noindent\rule{8cm}{0.4pt}\\
+\textbf{Problem 1}: Changing magnetic flux produces a current.\\
+
+\begin{wrapfigure}[8]{r}{0.6\textwidth}
+  \begin{center}
+  \vspace{-29pt}
+    \includegraphics[scale=0.85]{loopInduction}
+  \end{center}
+\end{wrapfigure}
+\noindent Jinyan is moving a square-shaped wire loop into a region (call it region $M$) that has a uniform magnetic field $B = 1\,\text{T}$ in a direction out of the page. The wire loop is moved to the right at a constant speed $5\,$m/s, and the right end of it enters region $M$ at time $t = 0$\,s.\\
+
+\noindent\textbf{Part (a)} Find the area $A$ of the loop that is immersed in region $M$ at an arbitrary time $t>0$. Keep your final answer in terms of $t$.\\
+
+\noindent\textbf{Part (b)} Find the magnetic flux going through the wire loop at arbitrary time $t>0$.\\
+
+\noindent\textbf{Part (c)} When does the magnetic flux through the loop stop changing?\\
+
+\noindent\textbf{Part (d)} Take $R= 5\,\Omega$. At time $t = 0.1$\,s, find the induced emf $\varepsilon$ and induced current in the wire loop. In what direction is the current running in the loop?\\
+
+\noindent\textbf{Part (e)} At time $t = 19^{57}$\,s, find the induced emf $\varepsilon$ and induced current in the wire loop.\\
+
+
+\hfill\break
+\hfill\break
+\noindent\textbf{Problem 2}: This is a combination of concepts that we have learned: (1) Current produces a magnetic field and (2) Changing magnetic flux produces a current. \\
+
+\begin{wrapfigure}[14]{r}{0.55\textwidth}
+  \begin{center}
+  \vspace{-29pt}
+    \includegraphics[scale=0.85]{solenoidInduction}
+  \end{center}
+\end{wrapfigure}
+Jinyan is powering up a solenoid using a power source $V$ that varies in time. There is a steady current running through the solenoid, but it will change in time as Jinyan changes the power source $V$. There is a smaller wire loop inside the solenoid (drawn in indigo), with enclosed area $A$, concentric with the solenoid. The small wire loop has resistance $r$. If Jinyan dials down the voltage $V = 10-t$ as a function of time (voltage is measured in Volts), find symbolically the induced current in the small wire loop at $t = 5$\,s. \footnote{This is a simplified version of the working mechanism of transformers (not the movie). We usually see this device at some electric poles on the street. It helps step voltage up (or down) while keeping overall electric power constant.}
+
+
+\newpage
+\noindent\textbf{Problem 3}: The oscillation of electric field and magnetic field together ``generates" a propagating electromagnetic wave. Take the speed of light as $c=3 \cdot 10^8\,$m/s.
+\begin{center}
+\includegraphics[scale=0.8]{antenna}
+\end{center}
+
+\noindent A ``$\perp$-mobile" antenna is emitting cell-phone signals. The antenna is oriented vertically, and it emits a signal that travels horizontally outward from the antenna. Jinyan is standing due east of the antenna, and at his location, the signal is traveling eastward. At one instant, Jinyan measures the electric field at his location and find that the field is pointing straight up with magnitude $3\,$V/m.\\
+
+\noindent\textbf{Part (a)} What is the direction (west? east? south? north? up? down?) and magnitude (numerical) of the magnetic field at Jinyan's location at that instant?\\
+
+
+\noindent \textbf{Part (b)} The signal that Jinyan receives has a wavelength $\lambda = 1\,$m. If Jinyan's jPhone-13 is receiving a very steady signal throughout the time, find the direction and magnitude of electric field, and that of magnetic field at his location $\lambda/(2c)$ seconds after. \footnote{This is a challenging problem, but it turns out that you don't need to do any numerical computation here. You just need to figure out what I am asking, and recall some knowledge about wave.}\,\footnote{Using $c = \lambda f$ and $f = 1/T$, find $T$ in terms of $c$ and $\lambda$. Then determine what $\lambda/(2c)$ means.}
+
+\vfill
+
+\begin{center}
+\includegraphics[scale=0.8]{EMwaveRHR}
+\end{center}
+
+\newpage
+\section*{Problem 1}
+The magnetic field is uniform and points out of the page, so the only thing that changes is how much of the square loop has entered region $M$. Since changing magnetic flux produces an emf in the loop, we first find the immersed area, then the flux, and finally the induced emf and current.\\
+
+\noindent\textbf{Part (a)} From the figure, the loop is a $1\,\text{m}\times 1\,\text{m}$ square. It moves to the right with speed $5\,$m/s. Therefore, after time $t$, the distance that the front edge has moved into region $M$ is $x = vt = 5t$\,. As long as the loop is still \underline{entering} the region, the immersed area is
+\begin{align*}
+A = (1\,\text{m})(5t\,\text{m}) = 5t\,\text{m}^2\,.
+\end{align*}
+This formula is valid until the whole loop has entered the region. Since the loop is $1\,$m wide, the entry process finishes when $
+5t = 1$, and thus at $t = 0.2\,\text{s}$\,. Therefore,
+\begin{align*}
+A(t)=
+\begin{cases}
+5t\,\text{m}^2\,, & 0<t<0.2\,\text{s}\,,\\
+1\,\text{m}^2\,, & t\ge 0.2\,\text{s}\,.
+\end{cases}
+\end{align*}
+
+\noindent\textbf{Part (b)} The magnetic flux through the loop is
+\begin{align*}
+\Phi_B = BA\cos(\theta)\,.
+\end{align*}
+Here the magnetic field is perpendicular to the loop, so the angle between the loop's normal and the direction of $\vec{B}$ is $\theta=0$. Thus $\cos(\theta)=1$. Also $B=1\,$T. Therefore,
+\begin{align*}
+\Phi_B(t)=
+\begin{cases}
+5t\,\text{Wb}\,, & 0<t<0.2\,\text{s}\,,\\
+1\,\text{Wb}\,, & t\ge 0.2\,\text{s}\,.
+\end{cases}
+\end{align*}
+
+\noindent\textbf{Part (c)} The magnetic flux stops changing when the immersed area stops changing, that is, when the entire loop has entered region $M$. From part (a), this happens at
+\begin{align*}
+t = 0.2\,\text{s}\,.
+\end{align*}
+
+\noindent\textbf{Part (d)} At time $t=0.1\,$s, the loop is still entering the field region. From part (a), during this stage the immersed area is
+\begin{align*}
+A(t)=5t\,\text{m}^2\,.
+\end{align*}
+So the area is increasing at a rate of
+\begin{align*}
+\frac{\Delta A}{\Delta t}=5\,\text{m}^2/\text{s}\,.
+\end{align*}
+Since $B=1\,\text{T}$, the magnetic flux is increasing at a rate of
+\begin{align*}
+\frac{\Delta \Phi_B}{\Delta t}=B\,\frac{\Delta A}{\Delta t}=(1\,\text{T})(5\,\text{m}^2/\text{s})=5\,\text{Wb/s}\,.
+\end{align*}
+Therefore, the magnitude of the induced emf is
+\begin{align*}
+\varepsilon = 5\,\text{V}\,.
+\end{align*}
+The induced current is then
+\begin{align*}
+I = \frac{\varepsilon}{R} = 1\,\text{A}\,.
+\end{align*}
+The direction of the current is obtained via Lenz's law: The outward magnetic flux is increasing, so by Lenz's law the induced current must create a magnetic field pointing \underline{into} the page to oppose that increase. By the right-hand rule, that means the current runs \underline{clockwise} to produce a field into the page.\\
+
+\noindent\textbf{Part (e)} At time $t=19^{57}\,$s, the situation is different from part (d). By then, the entire loop has long been inside the uniform field region, so the flux is constant. Therefore, $\Delta \Phi_{B}/\Delta t = 0\,$Wb$/$s, and thus $\varepsilon = 0\,\text{V}$ with $I=0\,\text{A}$\,.
+
+\section*{Problem 2}
+This problem combines several ideas together. First, the battery and resistor $R$ determine the current in the solenoid. Second, that current determines the magnetic field inside the solenoid. Third, if that magnetic field changes in time, the magnetic flux through the indigo small loop changes, which induces an emf and hence an induced current in the small loop.\\
+
+Here I draw the big circuit (drawn in red in the cartoon).
+\begin{center}
+\begin{circuitikz}[scale=0.95, transform shape]
+\draw
+(0,0) to[battery1,invert] (0,3)
+      -- (1.2,3) to[L] (4.2,3)
+      to[R] (4.2,0) -- (0,0);
+\node at (-0.8,1.5) {$V$};
+\node at (2.7,3.7) {$\text{solenoid}$};
+\node at (4.8,1.5) {$R$};
+\end{circuitikz}
+\end{center}
+
+\noindent For the big circuit containing the solenoid, the solenoid is just a chunk of twisted wire, so there is no resistance in it. Thus we use Ohm's law to find the current in the circuit, which is also the current that runs through the solenoid,
+\begin{align*}
+I_{\text{solenoid}} = \frac{V}{R} = \frac{10-t}{R}\,.
+\end{align*}
+Inside a long solenoid, the magnetic field is
+\begin{align*}
+B = \frac{\mu_0 N I_{\text{solenoid}}}{L}
+= \frac{\mu_0 N (10-t)}{LR}\,.
+\end{align*}
+So the magnetic flux through the small loop of area $A$ is
+\begin{align*}
+\Phi_B = BA = \frac{\mu_0 N A(10-t)}{LR}\,.
+\end{align*}
+Now we ask how fast this flux is changing. Since $V=10-t$, the voltage drops by $1$ Volt every second. Therefore the current in the solenoid drops by
+$1/R$ Amps per second, so the magnetic field drops by $\mu_0 N/(LR)$
+each second, and the magnetic flux through the small loop changes by
+\begin{align*}
+\frac{\Delta \Phi_{B}}{\Delta t}=- \frac{\mu_0 N A}{LR}\,.
+\end{align*}
+Therefore the magnitude of the induced emf in the small loop is
+\begin{align*}
+\varepsilon_{\text{ind}} =\left| \frac{\Delta \Phi_{B}}{\Delta t}\right|=  \frac{\mu_0 N A}{LR}\,.
+\end{align*}
+If you know calculus, this is way easier: We only need to use the $\Phi_B$ we just calculated,
+\begin{align*}
+\varepsilon_{\text{ind}} = \left| 
+\frac{d\Phi_{B}}{dt}
+\right| = -\frac{\mu_0 N A}{LR}\,.
+\end{align*}
+Since the small loop has resistance $r$, the induced current in that loop is
+\begin{align*}
+I_{\text{ind}} = \frac{\varepsilon_{\text{ind}}}{r}
+= \frac{\mu_0 N A}{LRr}\,.
+\end{align*}
+This is the symbolic answer at $t=5\,$s. In fact, because the source voltage is decreasing linearly in time, the induced current has the same magnitude at every time until the voltage stops changing, not just at $t=5\,$s.\\
+
+For the direction, Lenz's law says that the induced current must try to oppose the decrease in magnetic flux. So the induced current in the small loop runs in whatever direction creates a magnetic field in the \textbf{same direction} as the original solenoid field inside the loop.\\
+
+\section*{Problem 3}
+The key relation for an electromagnetic wave is that the direction of propagation is parallel to $\vec{E}\times \vec{B}$, and the magnitudes satisfy
+\begin{align*}
+E = cB\,.
+\end{align*}
+Here the wave is traveling eastward, and at the instant we care about, the electric field points upward with magnitude $3\,$V/m. In fact, in this story, the physical picture is: In the little cartoon, the red dot in the antenna can be thought of as an electron moving up and down. The oscillation of the electron creates oscillation of the electric field (up and down), and oscillation of the magnetic field (north and south). That produces the propagation of an electromagnetic wave in the horizontal direction away from the antenna, and thus the signal is received by Jinyan.\\
+
+For your reference, here are the different cases for direction of propagation of electromagnetic waves. You can verify them using the right-hand rule. 
+\begin{center}
+\includegraphics[scale=0.85]{waveDirection}
+\end{center}
+
+
+\noindent\textbf{Part (a)} We first find the magnitude of the magnetic field:
+\begin{align*}
+B = \frac{E}{c} = \frac{3\,\text{V/m}}{3\cdot 10^8\,\text{m/s}} = 1.0\cdot 10^{-8}\,\text{T}\,.
+\end{align*}
+Now we determine the direction. We want the cross product
+$\vec{E}\times \vec{B}$
+to point east. Since $\vec{E}$ points up, according to the right-hand rule, the magnetic field must point south in order for the cross product to point east. \\
+
+\noindent\textbf{Part (b)} Using
+\begin{align*}
+c = \lambda f\,,\qquad f=\frac{1}{T}\,,
+\end{align*}
+we find
+\begin{align*}
+T = \frac{\lambda}{c}\,.
+\end{align*}
+Therefore,
+\begin{align*}
+\frac{\lambda}{2c} = \frac{T}{2}\,.
+\end{align*}
+So the question is asking what happens half a period later. Half a period later, an oscillating wave reverses the direction of both $\vec{E}$ and $\vec{B}$, while keeping the same magnitude. Therefore, at time $\lambda/(2c)$ seconds later, $
+\vec{E} \text{ points down, with magnitude } 3\,\text{V/m}\,,$ and $
+\vec{B} \text{ points north, with magnitude } 1.0\cdot 10^{-8}\,\text{T}\,.$
+This makes sense: both fields reverse direction, but the wave still propagates eastward because
+\begin{align*}
+\vec{v}\parallel (-\vec{E})\times (-\vec{B}) = \vec{E}\times \vec{B}\,.
+\end{align*}
+
+
+\end{document}
