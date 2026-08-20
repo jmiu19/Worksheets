@@ -1,0 +1,227 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%Include Packages%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}, margin=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{rsfso}
+\usepackage{amsthm}
+\usepackage{wasysym}
+\usepackage[inline]{enumitem}
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{colortbl}
+\usepackage[american]{circuitikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\Large \noindent \textbf{Physics 5C Discussion (Worksheet 7)}\\
+\normalsize
+Department of Physics and Astronomy, UCLA\\
+
+\noindent TA: Jinyan Miao (jnmiu@ucla.edu)\\
+Office hours: Thursday 2:30 - 4:30 PM (PST) over Zoom \\
+Zoom ID: 963 5916 9873 (passcode: hiJinyan)\\
+Click for the \href{https://ucla.zoom.us/j/96359169873?pwd=05p7ssCPwTbl8KfxoBNCOuaIbt68jW.1}{\underline{Zoom link}} and \href{https://sites.google.com/umich.edu/jmiu/worksheets}{\underline{solutions to the worksheets}}.\\
+\noindent\rule{8cm}{0.4pt}\\
+
+\noindent In this worksheet, we will analyze circuits using Kirchhoff's circuit laws. The junction rule says that the total current entering a junction equals the total current leaving the junction,
+\begin{align*}
+\sum I_{\text{in}}=\sum I_{\text{out}}\,.
+\end{align*}
+The loop rule says that the sum of all potential changes around any closed loop is zero,
+\begin{align*}
+\sum \Delta V=0\,.
+\end{align*}
+For all problems, assume that the batteries and wires have negligible resistance.\\
+
+\noindent\textbf{Problem 1} Jinyan has built the same circuit that appeared in Problem 2 of Worksheet 6, redrawn below as a standard circuit diagram. This time, do not use equivalent resistance. Analyze the circuit using the junction rule and loop rule.
+\begin{center}
+\begin{circuitikz}[scale=0.9, transform shape]
+\draw
+(0,0) to[battery1,invert,l_={$40\,\mathrm{V}$}] (0,5)
+-- (3,5)
+(3,5) to[R,l={$R_B=5\,\Omega$}] (3,0)
+(3,5) -- (6,5)
+(6,5) to[R,l={$R_C=5\,\Omega$}] (6,2.5)
+to[R,l={$R_A=15\,\Omega$}] (6,0)
+-- (0,0);
+\fill (3,5) circle (2pt);
+\fill (3,0) circle (2pt);
+\end{circuitikz}
+\end{center}
+
+\noindent\textbf{Part (a)} Choose a direction for the current through the battery and for the current in each resistor branch. Write a junction-rule equation relating these currents.\\
+
+\noindent\textbf{Part (b)} Apply the loop rule to two suitable loops and use the resulting equations, together with the junction rule, to find the current through the battery and the current through each resistor.\\
+
+\noindent\textbf{Part (c)} Find the voltage drop across resistor $A$.\\
+
+
+
+\newpage
+\noindent\textbf{Problem 2} Now consider the multi-loop circuit shown below. There are two batteries in different branches of the circuit, and the upper terminal of each battery is positive. Find the current through each resistor using Kirchhoff's circuit laws.
+\begin{center}
+\begin{circuitikz}[scale=0.95, transform shape]
+\draw
+(0,0) to[battery1,invert,l_={$12\,\mathrm{V}$}] (0,4)
+to[R,l={$R_1=2\,\Omega$}] (3,4)
+to[R,l={$R_2=4\,\Omega$}] (6,4)
+to[battery1,l={$10\,\mathrm{V}$}] (6,0)
+-- (0,0)
+(3,4) to[R,l={$R_3=2\,\Omega$}] (3,0);
+\fill (3,4) circle (2pt);
+\fill (3,0) circle (2pt);
+\end{circuitikz}
+\end{center}
+
+\noindent\textbf{Part (a)} Choose a direction for each of the three unknown currents $I_1$, $I_2$, and $I_3$, where $I_1$, $I_2$, and $I_3$ are the currents through $R_1$, $R_2$, and $R_3$, respectively. Apply the junction rule at the top central junction.\\
+
+\noindent\textbf{Part (b)} Determine how many equations are needed to solve for the three unknown currents. Choose appropriate loops, apply the loop rule, and write a system of equations that contains enough different information to solve the problem.\\
+
+\noindent\textbf{Part (c)} Solve the system of equations and find $I_1$, $I_2$, and $I_3$. If any current is negative, explain what the negative sign means.\\
+
+\noindent\textbf{Part (d)} Find the voltage drops across the resistors and verify the loop rule for the loops used in part (b). 
+
+
+\newpage
+\section*{Problem 1}
+Let us first choose current directions. I will call the current traveling upward through the battery $I_0$. At the top junction, I assume that this current splits into a downward current $I_B$ through resistor $B$ and a downward current $I_{CA}$ through the branch containing resistors $C$ and $A$. These directions are guesses that allow us to write equations consistently. If a current turns out to be negative, that only means the real current points opposite to the direction that we guessed.\\
+
+\noindent\textbf{Part (a)} At the top junction, $I_0$ enters, while $I_B$ and $I_{CA}$ leave. The junction rule therefore gives
+\begin{align*}
+I_0=I_B+I_{CA}\,. \tag{1}
+\end{align*}
+There are three unknown currents, so we need three equations that provide three different pieces of information. Equation (1) is one of them. Applying the junction rule at the bottom junction would give the same information written in reverse, so that would not help us determine the three unknowns. We need two more useful equations, which we obtain from the loop rule.\\
+
+\noindent\textbf{Part (b)} Before writing the loop equations, let us establish the signs. When we cross a battery from its negative terminal to its positive terminal, the potential change is positive. That is, the battery is supplying some voltage. When we move through a resistor in the same direction as the current, the potential change is negative because there is a voltage drop $\Delta V = IR$. That is, the resistor is consuming some voltage supplied by the battery. Moving through a resistor opposite to the current instead gives a positive potential change.\\
+
+For the left loop, start at the negative terminal of the battery, travel upward through the battery, then travel downward through resistor $B$. We cross the battery from negative to positive, giving $+40$\,V, and we move through $B$ in the direction of $I_B$, giving a drop $-I_BR_B$. The loop rule gives
+\begin{align*}
+0 = V_{\text{battery}}-V_B=V_{\text{battery}}-I_BR_B = (40\,\text{V})-I_B(5\,\Omega)\,.\tag{2}
+\end{align*}
+Therefore,
+\begin{align*}
+I_B=\frac{40\,\text{V}}{5\,\Omega}=8\,\text{A}\,. 
+\end{align*}
+
+For the outer loop, start at the negative terminal of the battery, travel upward through the battery, then travel down the branch containing $C$ and $A$. The same current $I_{CA}$ passes through both $C$ and $A$ because there is no junction between them. The loop rule gives
+\begin{align*}
+0= V_{\text{battery}}-V_C-V_A= V_{\text{battery}}-I_{CA}R_C-I_{CA}R_A=(40\,\text{V})-I_{CA}(5\,\Omega)-I_{CA}(15\,\Omega)\,.\tag{3}
+\end{align*}
+Thus, rearranging, we find
+\begin{align*}
+I_{CA}=\frac{40\,\text{V}}{20\,\Omega}=2\,\text{A}\,. 
+\end{align*}
+
+You might have noticed that there is also a loop on the right in the circuit diagram: If we start from the bottom junction and go clockwise, we first go through resistor $B$ in the direction opposite to our guessed current direction, then we pass the top junction, make a right turn, and go through $C$ and $A$ aligned with our guessed direction of current. So we also have a loop rule here
+\begin{align*}
+0 = V_B - V_C-V_A =I_BR_B - I_{CA}R_C-I_{CA}R_A=I_B (5\,\Omega) - I_{CA}(5\,\Omega) - I_{CA}(15\,\Omega)\,. \tag{4}
+\end{align*}
+In fact, we only need to use two of the three equations (2), (3) and (4) obtained from the loop rule to solve for the two unknowns $I_B$ and $I_{CA}$. You can verify that, indeed, a combination of any two of them can do the job. Some combinations are easier (such as the one we did with equations (2) and (3)), but some others are a little more challenging.\\
+
+Now use the junction equation (1),
+\begin{align*}
+I_0=I_B+I_{CA}=8\,\text{A}+2\,\text{A}=10\,\text{A}\,.
+\end{align*}
+Therefore, the current through resistor $B$ is $8$\,A, the current through both $C$ and $A$ is $2$\,A, and the current through the battery is $10$\,A. All three results are positive, so the actual currents point in the directions that we assumed.\\
+
+\noindent Notice that we did not need to calculate an equivalent resistance. The junction rule told us how the current splits, while the loop rule required the potential gained from the battery to equal the potential dropped across the resistors in each closed path.\\
+
+\noindent\textbf{Part (c)} Since the current through resistor $A$ is $I_A=I_{CA}=2$\,A, Ohm's law gives
+\begin{align*}
+V_A=I_AR_A=(2\,\text{A})(15\,\Omega)=30\,\text{V}\,.
+\end{align*}
+As a quick check, the other $10$\,V is dropped across resistor $C$, because
+\begin{align*}
+I_CR_C=(2\,\text{A})(5\,\Omega)=10\,\text{V}\,.
+\end{align*}
+The two voltage drops add to the battery voltage, $30\,\text{V}+10\,\text{V}=40\,\text{V}$, as required by the loop rule.\\
+
+\section*{Problem 2}
+The equivalent-resistance approach is not useful for the entire circuit in this problem. Resistors $R_1$ and $R_2$ are not in series because their common connection is also attached to $R_3$, creating a junction. No two resistors are in parallel because no pair is connected to the same two junctions. More importantly, the two batteries are located in different branches, so there is no single battery voltage that we can simply divide by a total equivalent resistance to obtain all the branch currents. We need the junction rule and loop rule to keep track of both power sources and all three currents.\\
+
+\noindent\textbf{Part (a)} Focusing on the top central junction: I will assume that $I_1$ travels from the left battery through $R_1$ toward the top central junction. I will assume that $I_2$ travels from the right battery through $R_2$ toward the same junction. Finally, I will assume that $I_3$ travels downward through $R_3$. At the top central junction, $I_1$ and $I_2$ enter while $I_3$ leaves, so the junction rule gives
+\begin{align*}
+I_1+I_2=I_3\,. \tag{1}
+\end{align*}
+These directions are only our starting guesses. We do not need to know the actual directions before solving the circuit. The signs of the final answers will tell us whether the guesses were correct.\\
+
+\noindent\textbf{Part (b)} We have three unknowns, $I_1$, $I_2$, and $I_3$, so we need three equations containing three different pieces of information. The junction equation (1) gives one. For the other two, choose the small loop on the left and the small loop on the right. Of course, we could have also used the big outer loop containing both power sources and $R_1$ and $R_2$. These three loops give three equations, but we only need two of them, and you can check that any two of them suffice. \\
+
+For the left loop, begin at the negative terminal of the $12$\,V battery and travel clockwise. We cross the battery from negative to positive, travel through $R_1$ in the direction of $I_1$, and then travel downward through $R_3$ in the direction of $I_3$. Thus,
+\begin{align*}
+0=V_{\text{left batt.}}-I_1R_1-I_3R_3=12-2I_1-2I_3\,. \tag{2}
+\end{align*}
+Here the numerical values are understood to carry the appropriate units.\\
+
+For the right loop, begin at the negative terminal of the $10$\,V battery and travel counterclockwise. We cross that battery from negative to positive, travel through $R_2$ from right to left in the direction of $I_2$, and then travel downward through $R_3$ in the direction of $I_3$. Therefore,
+\begin{align*}
+0=V_{\text{right batt.}}-I_2R_2-I_3R_3=10-4I_2-2I_3\,. \tag{3}
+\end{align*}
+
+Equations (1), (2), and (3) are enough to solve the three unknown currents. Again, we could also write a loop equation around the large outside loop, but it would only repeat information already contained in equations (2) and (3). Similarly, applying the junction rule at the bottom central junction would reproduce equation (1). When counting equations, we should count only equations that tell us something new. A reliable strategy is to use all but one of the junction equations and then add loop equations until the number of useful equations matches the number of unknown currents.\\
+
+\noindent\textbf{Part (c)} Now it is just a matter of solving a system of equations,
+\begin{align*}
+\begin{cases}
+I_1+I_2 = I_3\\
+12-2I_1 - 2I_3=0\\
+10 - 4I_2 - 2I_3=0
+\end{cases}\,.
+\end{align*}
+There are many ways to solve this system of equations. My attempt starts by summing the first two equations to obtain
+\begin{align*}
+2I_1 + 2I_2 + 12 - 2I_1 - 2I_3 &= 2I_3 +0\\
+ 2I_2 + 12 - 2I_3 &= 2I_3\\
+  I_2 + 6  &= 2I_3
+\end{align*}
+Then we can combine this with the third equation to isolate $I_2$, 
+\begin{align*}
+10 - 4I_2 - I_2 -6 = 0\,,
+\end{align*}
+from which we find
+$I_2 = 0.8\,\text{A}
+$. Then using the third equation with $I_2 = 0.8\,\text{A}$ we find $I_3 = 3.4\,\text{A}$, and lastly the first equation with the found values of $I_2$ and $I_3$ gives $I_1 = 2.6\,\text{A}$. We thus have found
+\begin{align*}
+I_1 = 2.6\,\text{A}\,,\qquad
+I_2 = 0.8 \,\text{A}\,,\qquad
+I_3 = 3.4\,\text{A}\,.
+\end{align*}
+All three currents are positive. Therefore, our assumed directions were correct: $I_1$ travels from the left toward the central junction, $I_2$ travels from the right toward the central junction, and $I_3$ travels downward through $R_3$. If one of the answers had been negative, we would keep its magnitude but reverse its direction relative to our original arrow.\\
+
+\noindent\textbf{Part (d)} 
+The current through each resistor has been found in part (c), so we can use Ohm's law to find the corresponding voltage drops,
+\begin{align*}
+V_1&=I_1R_1=(2.6\,\text{A})(2\,\Omega)=5.2\,\text{V}\,,\\
+V_2&=I_2R_2=(0.8\,\text{A})(4\,\Omega)=3.2\,\text{V}\,,\\
+V_3&=I_3R_3=(3.4\,\text{A})(2\,\Omega)=6.8\,\text{V}\,.
+\end{align*}
+These are voltage drops when we travel through the resistors in the directions of the currents that we found in part (c). If we travel through a resistor opposite to the direction of its current, the corresponding potential change has the opposite sign.\\
+
+Now we verify the loop rule for the two loops used in part (b). For the left loop, begin at the negative terminal of the $12$\,V battery and travel clockwise. The battery gives a potential increase of $12$\,V, while resistors $R_1$ and $R_3$ give voltage drops of $5.2$\,V and $6.8$\,V. For the right loop, begin at the negative terminal of the $10$\,V battery and travel counterclockwise. That battery gives a potential increase of $10$\,V, while resistors $R_2$ and $R_3$ give voltage drops of $3.2$\,V and $6.8$\,V. Therefore,
+\begin{align*}
+\sum \Delta V_{\text{left loop}}
+&=V_{\text{left batt.}}-V_1-V_3
+=12\,\text{V}-5.2\,\text{V}-6.8\,\text{V}
+=0\,\text{V}\,,\\
+\sum \Delta V_{\text{right loop}}
+&=V_{\text{right batt.}}-V_2-V_3
+=10\,\text{V}-3.2\,\text{V}-6.8\,\text{V}
+=0\,\text{V}\,.
+\end{align*}
+The sum of the potential changes is zero for both loops, as required by Kirchhoff's loop rule.\\
+
+\begin{center}
+\includegraphics[scale=0.19]{IMG_4347}\\
+
+Visited University of Virginia in August, 2026.
+\end{center}
+
+\end{document}
