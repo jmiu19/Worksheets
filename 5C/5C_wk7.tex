@@ -168,7 +168,9 @@ If both switches are open, the capacitor discharges through $R$. As we argued in
 
 \section*{Problem 2}
 
-\noindent\textbf{Part (a)} A solenoid is just many circular current loops stacked next to one another. Each loop produces a magnetic field. Inside the solenoid, the magnetic fields from neighboring loops point mostly in the same direction, so they add together. Outside the solenoid, the fields from neighboring loops tend to point in different directions and partially cancel. This is why the magnetic field inside a long solenoid is much stronger than the field outside. The field inside is also more uniform because, far from the two ends towards the middle of the solenoid, each turn of the solenoid contributes in almost the same way. Near the ends the symmetry is less perfect, so the field becomes less uniform there.\\
+\noindent\textbf{Part (a)} A solenoid is just many circular current loops stacked next to one another. Each loop produces a magnetic field. Inside the solenoid, the magnetic fields from neighboring loops point mostly in the same direction, so they add together. In the picture, based on the direction of current and using your right-hand rule, you can check that each loop produces a magnetic field pointing to the right at its center. The fields produced by these loops add together, and thus the field inside the solenoid is pointing to the right.  Outside the solenoid, the opposing magnetic field contributions from the top and bottom wire segments of each loop mostly cancel (similar to what happens to electric field outside a finite-size parallel-plate capacitor). Thus the magnetic field inside the solenoid is much stronger than outside.\\
+
+One needs some calculus trick to show why the field inside is uniform, but we can examine from the geometry that the field inside the solenoid, towards the middle of the solenoid is also more uniform than outside, and than the left and right ends of the solenoid. This is because far from the two ends towards the middle of the solenoid, each turn of the solenoid contributes in almost the same way, and the turns are closely stack together. While at the two ends, the symmetry is less perfect, so the field becomes less uniform there.\\
 
 \noindent\textbf{Part (b)} The given formula is
 \begin{align*}
@@ -211,18 +213,8 @@ and direction determined by the right-hand rule. In this case, the direction of 
 \end{align*}
 That force points away from the bottom wire as you can verify using the right-hand rule again. By the same argument, the bottom wire is pushed away from the top wire, so the two wires repel each other.\\
 
-\noindent\textbf{Part (c)} Now the problem gives us all the numbers that we need. The current in the wire is
-\begin{align*}
-I = 50\,\mu\text{A} = 50\times 10^{-6}\,\text{A} = 5\times 10^{-5}\,\text{A}\,,
-\end{align*}
-the wire separation is
-\begin{align*}
-d = 1\,\text{m}\,,
-\end{align*}
-and the electron speed is
-\begin{align*}
-v = 1\,\text{nm/s} = 10^{-9}\,\text{m/s}\,.
-\end{align*}
+\noindent\textbf{Part (c)} The current in the wire is
+$I = 50\,\mu\text{A} = 5\times 10^{-5}\,\text{A}\,,$ the wire separation is $d = 1\,\text{m}\,,$ and the electron speed is $v = 1\,\text{nm/s} = 10^{-9}\,\text{m/s}\,.$
 Then the magnetic field produced by the bottom wire at the location of the top wire is
 \begin{align*}
 B = \frac{\mu_0 I}{2\pi d}
