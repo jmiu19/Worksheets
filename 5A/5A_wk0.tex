@@ -25,7 +25,8 @@
 Department of Physics and Astronomy, UCLA\\
 
 \noindent TA:  Jinyan Miao (jnmiu@ucla.edu)\\
-Office hour: Thursday 9-10 AM at PAB 2-429\\
+Office hours: Monday 4-6 PM at PAB 2-429\\
+Tutoring center hours: Monday 10-11 AM at PAB 2-429 (Zoom room also available)\\
 \noindent\rule{8cm}{0.4pt}\\
 
 
@@ -61,16 +62,16 @@ F = \rho v^2 B\,.
 \includegraphics[scale=0.8]{distance}
 \end{center}
 
-\noindent\textbf{Problem 3: (Make sure you include units in your final answers!)}  Using the figure shown, if the distance between Jinyan and Michael is $4$ meters, and the distance between Michael and Albert is $3$ meters, what is the distance between Jinyan and Albert? What is the angle $\theta$ in degrees? What is the angle $\theta$ in radian?\\
+\noindent\textbf{Problem 3: (Make sure you include units in your final answers!)}  Using the figure shown, if the distance between Jinyan and Michael is $4$ meters, and the distance between Michael and Albert is $3$ meters, what is the distance between Jinyan and Albert? What is the angle $\theta$ in degrees? What is the angle $\theta$ in radians?\\
 \newline\newline\newline
 \newline\newline\newline
 \newline\newline\newline
 
 
 \begin{center}
-\includegraphics[scale=0.9]{push}
+\includegraphics[scale=0.9]{rock}
 \end{center}
-\noindent\textbf{Problem 4}: Jinyan is pushing a huge rock up an incline, which makes an angle $30^\circ$ above the horizontal. His friend Michael is trying to analyze the force that Jinyan needs to hold the rock, where Michael needs to analyze the geometry drawn in the figure: There is a small right triangle $\Delta ABC$. The line segment $AC$ is parallel to the incline, and the line segment $BC$ is perpendicular to the incline. If the force arrow $BA$ has a ``length" of $100$ Newtons, find the ``lengths" of the line segments $AC$ and $BC$. All these ``lengths" are measured in Newtons, so your final answer should be expressed with the unit N. (\textit{Hint:} First find out the angle of $\angle ABC$ using the given information, then use the $\sin$ and $\cos$ functions to find the length of the edges of the right triangle.)
+\noindent\textbf{Problem 4}: Jinyan is pushing a huge rock up an incline, which makes an angle $30^\circ$ above the horizontal. His friend Michael is analyzing the force Jinyan must apply to hold the rock, using the geometry shown in the figure. There is a small right triangle $\Delta ABC$. The line segment $AC$ is parallel to the incline, and the line segment $BC$ is perpendicular to the incline. If the force arrow $BA$ has a ``length" of $100$ Newtons, find the ``lengths" of the line segments $AC$ and $BC$. All these ``lengths" are measured in Newtons, so your final answer should be expressed with the unit N. (\textit{Hint:} First find $\angle ABC$ using the given information, then use the sine and cosine functions to find the lengths of the sides of the right triangle.)
 
 
 %\textbf{Problem 4:} If $\theta = \pi/6$ in radian, and the distance between Alice and Bob is $10$ meters, what is the distance between Bob and Charlie?
@@ -80,7 +81,7 @@ F = \rho v^2 B\,.
 
 \newpage
 \section*{Problem 1}
-I recommend first convert everything to the unit that you want, then do the algebra and computations, so we first we do 
+I recommend first converting everything to the desired unit and then doing the algebra and computations, so we first write
 \begin{align*}
 r = 5 \text{ m} = \frac{5}{0.305}\text{ ft}\,,
 \end{align*}
@@ -100,6 +101,58 @@ then we just plug in the units and get
 [B] = \frac{\text{kg m/s}^2}{(\text{kg/m}^3)\cdot (\text{m/s})^2} = \text{m}^2\,. 
 \end{align*}
 Now we see that $B$ has the unit of m$^2$, which is something like an ``Area". \\
+
+\section*{Problem 3}
+The angle at Michael is a right angle, so the distances from Jinyan to Michael and from Michael to Albert are the two sides of a right triangle. The distance from Jinyan to Albert is the hypotenuse. Using the Pythagorean theorem, we have
+\begin{align*}
+(\text{Jinyan--Michael})^2+(\text{Michael--Albert})^2=(\text{Jinyan--Albert})^2\,.
+\end{align*}
+Then we plug in the two known distances and get
+\begin{align*}
+(4\,\text{m})^2+(3\,\text{m})^2&=(\text{Jinyan--Albert})^2\,,\\
+\text{Jinyan--Albert}&=\sqrt{(4\,\text{m})^2+(3\,\text{m})^2}\\
+&=\sqrt{16+9}\,\text{m}=5\,\text{m}\,.
+\end{align*}
+To find the angle $\theta$ at Jinyan, the $3$ m side is opposite to $\theta$ and the $4$ m side is adjacent to $\theta$, so we use the tangent function,
+\begin{align*}
+\tan(\theta)=\frac{\text{opposite}}{\text{adjacent}}=\frac{3\,\text{m}}{4\,\text{m}}=\frac{3}{4}\,.
+\end{align*}
+Taking the inverse tangent of both sides gives the angle in degrees,
+\begin{align*}
+\theta=\arctan\left(\frac{3}{4}\right)=36.9^\circ\,.
+\end{align*}
+Finally, we convert this angle from degrees to radians,
+\begin{align*}
+\theta=36.9^\circ\cdot\frac{\pi\,\text{rad}}{180^\circ}=0.644\,\text{rad}\,.
+\end{align*}
+Thus the distance between Jinyan and Albert is $5$ m, and the angle is $36.9^\circ$, or equivalently $0.644$ rad.\\
+
+\section*{Problem 4}
+The line segment $BA$ is vertical, so it makes an angle $90^\circ$ with the horizontal. The line segment $AC$ is parallel to the incline and makes an angle $30^\circ$ with the horizontal. Therefore, the angle at $A$ in the small right triangle is
+\begin{align*}
+\angle BAC=90^\circ-30^\circ=60^\circ\,.
+\end{align*}
+Since $\angle ACB=90^\circ$, the three angles of the triangle give
+\begin{align*}
+\angle ABC=180^\circ-\angle BAC-\angle ACB=180^\circ-60^\circ-90^\circ=30^\circ\,.
+\end{align*}
+The line segment $BA$ is the hypotenuse with a ``length" of $100$ N. Relative to $\angle ABC=30^\circ$, the line segment $AC$ is the opposite side, so
+\begin{align*}
+\sin(30^\circ)=\frac{AC}{BA}=\frac{AC}{100\,\text{N}}\,.
+\end{align*}
+We thus find
+\begin{align*}
+AC=(100\,\text{N})\sin(30^\circ)=(100\,\text{N})\left(\frac{1}{2}\right)=50.0\,\text{N}\,.
+\end{align*}
+The line segment $BC$ is the adjacent side, so
+\begin{align*}
+\cos(30^\circ)=\frac{BC}{BA}=\frac{BC}{100\,\text{N}}\,.
+\end{align*}
+Therefore,
+\begin{align*}
+BC=(100\,\text{N})\cos(30^\circ)=(100\,\text{N})\left(\frac{\sqrt{3}}{2}\right)=86.6\,\text{N}\,.
+\end{align*}
+Thus the force component parallel to the incline has a ``length" $AC=50.0$ N, while the force component perpendicular to the incline has a ``length" $BC=86.6$ N.\\
 
 %\section*{Problem 3}
 %To find the distance between Alice ($A$) and Bob ($B$), we use the ``Pythagorean theorem" for triangles (with $a$ being opposite side, $b$ being adjacent side, and $c$ being hypotenuse), which states that 
@@ -128,5 +181,4 @@ Now we see that $B$ has the unit of m$^2$, which is something like an ``Area". \
 %Again, make sure you include the unit :)
 
 \end{document}
-
 
